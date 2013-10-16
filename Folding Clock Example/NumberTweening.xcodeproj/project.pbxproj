@@ -1,0 +1,512 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		371A9E26180D7F7B0023508D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371A9E25180D7F7B0023508D /* Foundation.framework */; };
+		371A9E28180D7F7B0023508D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371A9E27180D7F7B0023508D /* CoreGraphics.framework */; };
+		371A9E2A180D7F7B0023508D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371A9E29180D7F7B0023508D /* UIKit.framework */; };
+		371A9E30180D7F7B0023508D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 371A9E2E180D7F7B0023508D /* InfoPlist.strings */; };
+		371A9E32180D7F7B0023508D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 371A9E31180D7F7B0023508D /* main.m */; };
+		371A9E36180D7F7B0023508D /* MFLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 371A9E35180D7F7B0023508D /* MFLAppDelegate.m */; };
+		371A9E39180D7F7B0023508D /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 371A9E37180D7F7B0023508D /* Main_iPhone.storyboard */; };
+		371A9E3C180D7F7B0023508D /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 371A9E3A180D7F7B0023508D /* Main_iPad.storyboard */; };
+		371A9E3F180D7F7B0023508D /* MFLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 371A9E3E180D7F7B0023508D /* MFLViewController.m */; };
+		371A9E41180D7F7B0023508D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 371A9E40180D7F7B0023508D /* Images.xcassets */; };
+		371A9E48180D7F7B0023508D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371A9E47180D7F7B0023508D /* XCTest.framework */; };
+		371A9E49180D7F7B0023508D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371A9E25180D7F7B0023508D /* Foundation.framework */; };
+		371A9E4A180D7F7B0023508D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371A9E29180D7F7B0023508D /* UIKit.framework */; };
+		371A9E52180D7F7B0023508D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 371A9E50180D7F7B0023508D /* InfoPlist.strings */; };
+		371A9E54180D7F7B0023508D /* NumberTweeningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 371A9E53180D7F7B0023508D /* NumberTweeningTests.m */; };
+		37A122B7180E259E002FA52E /* MFLFoldingDigit.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A122B6180E259E002FA52E /* MFLFoldingDigit.m */; };
+		37A122BA180E25AB002FA52E /* MFLFoldingClock.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A122B9180E25AB002FA52E /* MFLFoldingClock.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		371A9E4B180D7F7B0023508D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 371A9E1A180D7F7B0023508D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 371A9E21180D7F7B0023508D;
+			remoteInfo = NumberTweening;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		371A9E22180D7F7B0023508D /* NumberTweening.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumberTweening.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		371A9E25180D7F7B0023508D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		371A9E27180D7F7B0023508D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		371A9E29180D7F7B0023508D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		371A9E2D180D7F7B0023508D /* NumberTweening-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NumberTweening-Info.plist"; sourceTree = "<group>"; };
+		371A9E2F180D7F7B0023508D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		371A9E31180D7F7B0023508D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		371A9E33180D7F7B0023508D /* NumberTweening-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NumberTweening-Prefix.pch"; sourceTree = "<group>"; };
+		371A9E34180D7F7B0023508D /* MFLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFLAppDelegate.h; sourceTree = "<group>"; };
+		371A9E35180D7F7B0023508D /* MFLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFLAppDelegate.m; sourceTree = "<group>"; };
+		371A9E38180D7F7B0023508D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		371A9E3B180D7F7B0023508D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		371A9E3D180D7F7B0023508D /* MFLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFLViewController.h; sourceTree = "<group>"; };
+		371A9E3E180D7F7B0023508D /* MFLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFLViewController.m; sourceTree = "<group>"; };
+		371A9E40180D7F7B0023508D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		371A9E46180D7F7B0023508D /* NumberTweeningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumberTweeningTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		371A9E47180D7F7B0023508D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		371A9E4F180D7F7B0023508D /* NumberTweeningTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NumberTweeningTests-Info.plist"; sourceTree = "<group>"; };
+		371A9E51180D7F7B0023508D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		371A9E53180D7F7B0023508D /* NumberTweeningTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NumberTweeningTests.m; sourceTree = "<group>"; };
+		37A122B5180E259E002FA52E /* MFLFoldingDigit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFLFoldingDigit.h; sourceTree = "<group>"; };
+		37A122B6180E259E002FA52E /* MFLFoldingDigit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFLFoldingDigit.m; sourceTree = "<group>"; };
+		37A122B8180E25AB002FA52E /* MFLFoldingClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFLFoldingClock.h; sourceTree = "<group>"; };
+		37A122B9180E25AB002FA52E /* MFLFoldingClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFLFoldingClock.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		371A9E1F180D7F7B0023508D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				371A9E28180D7F7B0023508D /* CoreGraphics.framework in Frameworks */,
+				371A9E2A180D7F7B0023508D /* UIKit.framework in Frameworks */,
+				371A9E26180D7F7B0023508D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		371A9E43180D7F7B0023508D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				371A9E48180D7F7B0023508D /* XCTest.framework in Frameworks */,
+				371A9E4A180D7F7B0023508D /* UIKit.framework in Frameworks */,
+				371A9E49180D7F7B0023508D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		371A9E19180D7F7B0023508D = {
+			isa = PBXGroup;
+			children = (
+				371A9E2B180D7F7B0023508D /* NumberTweening */,
+				371A9E4D180D7F7B0023508D /* NumberTweeningTests */,
+				371A9E24180D7F7B0023508D /* Frameworks */,
+				371A9E23180D7F7B0023508D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		371A9E23180D7F7B0023508D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				371A9E22180D7F7B0023508D /* NumberTweening.app */,
+				371A9E46180D7F7B0023508D /* NumberTweeningTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		371A9E24180D7F7B0023508D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				371A9E25180D7F7B0023508D /* Foundation.framework */,
+				371A9E27180D7F7B0023508D /* CoreGraphics.framework */,
+				371A9E29180D7F7B0023508D /* UIKit.framework */,
+				371A9E47180D7F7B0023508D /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		371A9E2B180D7F7B0023508D /* NumberTweening */ = {
+			isa = PBXGroup;
+			children = (
+				371A9E5D180D81810023508D /* TweenClock */,
+				371A9E34180D7F7B0023508D /* MFLAppDelegate.h */,
+				371A9E35180D7F7B0023508D /* MFLAppDelegate.m */,
+				371A9E37180D7F7B0023508D /* Main_iPhone.storyboard */,
+				371A9E3A180D7F7B0023508D /* Main_iPad.storyboard */,
+				371A9E3D180D7F7B0023508D /* MFLViewController.h */,
+				371A9E3E180D7F7B0023508D /* MFLViewController.m */,
+				371A9E40180D7F7B0023508D /* Images.xcassets */,
+				371A9E2C180D7F7B0023508D /* Supporting Files */,
+			);
+			path = NumberTweening;
+			sourceTree = "<group>";
+		};
+		371A9E2C180D7F7B0023508D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				371A9E2D180D7F7B0023508D /* NumberTweening-Info.plist */,
+				371A9E2E180D7F7B0023508D /* InfoPlist.strings */,
+				371A9E31180D7F7B0023508D /* main.m */,
+				371A9E33180D7F7B0023508D /* NumberTweening-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		371A9E4D180D7F7B0023508D /* NumberTweeningTests */ = {
+			isa = PBXGroup;
+			children = (
+				371A9E53180D7F7B0023508D /* NumberTweeningTests.m */,
+				371A9E4E180D7F7B0023508D /* Supporting Files */,
+			);
+			path = NumberTweeningTests;
+			sourceTree = "<group>";
+		};
+		371A9E4E180D7F7B0023508D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				371A9E4F180D7F7B0023508D /* NumberTweeningTests-Info.plist */,
+				371A9E50180D7F7B0023508D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		371A9E5D180D81810023508D /* TweenClock */ = {
+			isa = PBXGroup;
+			children = (
+				37A122B5180E259E002FA52E /* MFLFoldingDigit.h */,
+				37A122B6180E259E002FA52E /* MFLFoldingDigit.m */,
+				37A122B8180E25AB002FA52E /* MFLFoldingClock.h */,
+				37A122B9180E25AB002FA52E /* MFLFoldingClock.m */,
+			);
+			path = TweenClock;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		371A9E21180D7F7B0023508D /* NumberTweening */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 371A9E57180D7F7B0023508D /* Build configuration list for PBXNativeTarget "NumberTweening" */;
+			buildPhases = (
+				371A9E1E180D7F7B0023508D /* Sources */,
+				371A9E1F180D7F7B0023508D /* Frameworks */,
+				371A9E20180D7F7B0023508D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NumberTweening;
+			productName = NumberTweening;
+			productReference = 371A9E22180D7F7B0023508D /* NumberTweening.app */;
+			productType = "com.apple.product-type.application";
+		};
+		371A9E45180D7F7B0023508D /* NumberTweeningTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 371A9E5A180D7F7B0023508D /* Build configuration list for PBXNativeTarget "NumberTweeningTests" */;
+			buildPhases = (
+				371A9E42180D7F7B0023508D /* Sources */,
+				371A9E43180D7F7B0023508D /* Frameworks */,
+				371A9E44180D7F7B0023508D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				371A9E4C180D7F7B0023508D /* PBXTargetDependency */,
+			);
+			name = NumberTweeningTests;
+			productName = NumberTweeningTests;
+			productReference = 371A9E46180D7F7B0023508D /* NumberTweeningTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		371A9E1A180D7F7B0023508D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MFL;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = MFL;
+				TargetAttributes = {
+					371A9E45180D7F7B0023508D = {
+						TestTargetID = 371A9E21180D7F7B0023508D;
+					};
+				};
+			};
+			buildConfigurationList = 371A9E1D180D7F7B0023508D /* Build configuration list for PBXProject "NumberTweening" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 371A9E19180D7F7B0023508D;
+			productRefGroup = 371A9E23180D7F7B0023508D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				371A9E21180D7F7B0023508D /* NumberTweening */,
+				371A9E45180D7F7B0023508D /* NumberTweeningTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		371A9E20180D7F7B0023508D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				371A9E3C180D7F7B0023508D /* Main_iPad.storyboard in Resources */,
+				371A9E41180D7F7B0023508D /* Images.xcassets in Resources */,
+				371A9E39180D7F7B0023508D /* Main_iPhone.storyboard in Resources */,
+				371A9E30180D7F7B0023508D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		371A9E44180D7F7B0023508D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				371A9E52180D7F7B0023508D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		371A9E1E180D7F7B0023508D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37A122BA180E25AB002FA52E /* MFLFoldingClock.m in Sources */,
+				371A9E3F180D7F7B0023508D /* MFLViewController.m in Sources */,
+				37A122B7180E259E002FA52E /* MFLFoldingDigit.m in Sources */,
+				371A9E36180D7F7B0023508D /* MFLAppDelegate.m in Sources */,
+				371A9E32180D7F7B0023508D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		371A9E42180D7F7B0023508D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				371A9E54180D7F7B0023508D /* NumberTweeningTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		371A9E4C180D7F7B0023508D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 371A9E21180D7F7B0023508D /* NumberTweening */;
+			targetProxy = 371A9E4B180D7F7B0023508D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		371A9E2E180D7F7B0023508D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				371A9E2F180D7F7B0023508D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		371A9E37180D7F7B0023508D /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				371A9E38180D7F7B0023508D /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		371A9E3A180D7F7B0023508D /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				371A9E3B180D7F7B0023508D /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		371A9E50180D7F7B0023508D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				371A9E51180D7F7B0023508D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		371A9E55180D7F7B0023508D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		371A9E56180D7F7B0023508D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		371A9E58180D7F7B0023508D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NumberTweening/NumberTweening-Prefix.pch";
+				INFOPLIST_FILE = "NumberTweening/NumberTweening-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		371A9E59180D7F7B0023508D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NumberTweening/NumberTweening-Prefix.pch";
+				INFOPLIST_FILE = "NumberTweening/NumberTweening-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		371A9E5B180D7F7B0023508D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NumberTweening.app/NumberTweening";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NumberTweening/NumberTweening-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "NumberTweeningTests/NumberTweeningTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		371A9E5C180D7F7B0023508D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NumberTweening.app/NumberTweening";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NumberTweening/NumberTweening-Prefix.pch";
+				INFOPLIST_FILE = "NumberTweeningTests/NumberTweeningTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		371A9E1D180D7F7B0023508D /* Build configuration list for PBXProject "NumberTweening" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				371A9E55180D7F7B0023508D /* Debug */,
+				371A9E56180D7F7B0023508D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		371A9E57180D7F7B0023508D /* Build configuration list for PBXNativeTarget "NumberTweening" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				371A9E58180D7F7B0023508D /* Debug */,
+				371A9E59180D7F7B0023508D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		371A9E5A180D7F7B0023508D /* Build configuration list for PBXNativeTarget "NumberTweeningTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				371A9E5B180D7F7B0023508D /* Debug */,
+				371A9E5C180D7F7B0023508D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 371A9E1A180D7F7B0023508D /* Project object */;
+}
