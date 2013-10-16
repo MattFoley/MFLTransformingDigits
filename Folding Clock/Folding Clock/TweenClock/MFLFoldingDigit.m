@@ -127,11 +127,6 @@ static CGPoint controlTwo[10][4] =
     } // 9
 };
 
-
-- (CGFloat)getInterpolation:(CGFloat)input {
-    return (cosf(((input + 1)) * M_PI) / 2) + 0.5;
-}
-
 #pragma mark Initialization
 - (id)initWithFrame:(CGRect)frame andDigit:(NSInteger)initialDigit
 {
@@ -195,7 +190,6 @@ static CGPoint controlTwo[10][4] =
 - (void)animateToDigit:(NSInteger)digit
 {
     self.currentDigit = digit;
-    CGFloat frame = [self getInterpolation:0];
     
     [self.drawnDigits enumerateObjectsUsingBlock:^(CAShapeLayer *segment, NSUInteger idx, BOOL *stop) {
         UIBezierPath *newPath = [[UIBezierPath alloc] init];
@@ -210,6 +204,9 @@ static CGPoint controlTwo[10][4] =
         pathAnim.toValue = (__bridge id)newPath.CGPath;
         pathAnim.duration = 2;
         pathAnim.fillMode = kCAFillModeForwards;
+        CAMediaTimingFunction *customTimingFunction;
+        customTimingFunction=[CAMediaTimingFunction functionWithControlPoints:0.25f :0.1f :0.25f :1.0f];
+        
         pathAnim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
         
         [segment addAnimation:pathAnim forKey:@"segmentTransform"];
