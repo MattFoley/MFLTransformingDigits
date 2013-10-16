@@ -10,20 +10,21 @@
 		371A9E26180D7F7B0023508D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371A9E25180D7F7B0023508D /* Foundation.framework */; };
 		371A9E28180D7F7B0023508D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371A9E27180D7F7B0023508D /* CoreGraphics.framework */; };
 		371A9E2A180D7F7B0023508D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371A9E29180D7F7B0023508D /* UIKit.framework */; };
-		371A9E30180D7F7B0023508D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 371A9E2E180D7F7B0023508D /* InfoPlist.strings */; };
-		371A9E32180D7F7B0023508D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 371A9E31180D7F7B0023508D /* main.m */; };
-		371A9E36180D7F7B0023508D /* MFLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 371A9E35180D7F7B0023508D /* MFLAppDelegate.m */; };
-		371A9E39180D7F7B0023508D /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 371A9E37180D7F7B0023508D /* Main_iPhone.storyboard */; };
-		371A9E3C180D7F7B0023508D /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 371A9E3A180D7F7B0023508D /* Main_iPad.storyboard */; };
-		371A9E3F180D7F7B0023508D /* MFLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 371A9E3E180D7F7B0023508D /* MFLViewController.m */; };
-		371A9E41180D7F7B0023508D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 371A9E40180D7F7B0023508D /* Images.xcassets */; };
 		371A9E48180D7F7B0023508D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371A9E47180D7F7B0023508D /* XCTest.framework */; };
 		371A9E49180D7F7B0023508D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371A9E25180D7F7B0023508D /* Foundation.framework */; };
 		371A9E4A180D7F7B0023508D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371A9E29180D7F7B0023508D /* UIKit.framework */; };
 		371A9E52180D7F7B0023508D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 371A9E50180D7F7B0023508D /* InfoPlist.strings */; };
 		371A9E54180D7F7B0023508D /* NumberTweeningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 371A9E53180D7F7B0023508D /* NumberTweeningTests.m */; };
-		37A122B7180E259E002FA52E /* MFLFoldingDigit.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A122B6180E259E002FA52E /* MFLFoldingDigit.m */; };
-		37A122BA180E25AB002FA52E /* MFLFoldingClock.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A122B9180E25AB002FA52E /* MFLFoldingClock.m */; };
+		37A8DE31180E511C003349D1 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A8DE1C180E511C003349D1 /* Main_iPad.storyboard */; };
+		37A8DE32180E511C003349D1 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A8DE1E180E511C003349D1 /* Main_iPhone.storyboard */; };
+		37A8DE33180E511C003349D1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37A8DE20180E511C003349D1 /* InfoPlist.strings */; };
+		37A8DE34180E511C003349D1 /* Folding Clock-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37A8DE22180E511C003349D1 /* Folding Clock-Info.plist */; };
+		37A8DE35180E511C003349D1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37A8DE24180E511C003349D1 /* Images.xcassets */; };
+		37A8DE36180E511C003349D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A8DE25180E511C003349D1 /* main.m */; };
+		37A8DE37180E511C003349D1 /* MFLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A8DE27180E511C003349D1 /* MFLAppDelegate.m */; };
+		37A8DE38180E511C003349D1 /* MFLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A8DE29180E511C003349D1 /* MFLViewController.m */; };
+		37A8DE39180E511C003349D1 /* MFLFoldingClock.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A8DE2C180E511C003349D1 /* MFLFoldingClock.m */; };
+		37A8DE3A180E511C003349D1 /* MFLFoldingDigit.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A8DE2E180E511C003349D1 /* MFLFoldingDigit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,30 +38,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		371A9E22180D7F7B0023508D /* NumberTweening.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumberTweening.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		371A9E22180D7F7B0023508D /* Folding Clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Folding Clock.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		371A9E25180D7F7B0023508D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		371A9E27180D7F7B0023508D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		371A9E29180D7F7B0023508D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		371A9E2D180D7F7B0023508D /* NumberTweening-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NumberTweening-Info.plist"; sourceTree = "<group>"; };
-		371A9E2F180D7F7B0023508D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		371A9E31180D7F7B0023508D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		371A9E33180D7F7B0023508D /* NumberTweening-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NumberTweening-Prefix.pch"; sourceTree = "<group>"; };
-		371A9E34180D7F7B0023508D /* MFLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFLAppDelegate.h; sourceTree = "<group>"; };
-		371A9E35180D7F7B0023508D /* MFLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFLAppDelegate.m; sourceTree = "<group>"; };
-		371A9E38180D7F7B0023508D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		371A9E3B180D7F7B0023508D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		371A9E3D180D7F7B0023508D /* MFLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MFLViewController.h; sourceTree = "<group>"; };
-		371A9E3E180D7F7B0023508D /* MFLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MFLViewController.m; sourceTree = "<group>"; };
-		371A9E40180D7F7B0023508D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		371A9E46180D7F7B0023508D /* NumberTweeningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumberTweeningTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		371A9E46180D7F7B0023508D /* Folding ClockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Folding ClockTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		371A9E47180D7F7B0023508D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		371A9E4F180D7F7B0023508D /* NumberTweeningTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NumberTweeningTests-Info.plist"; sourceTree = "<group>"; };
+		371A9E4F180D7F7B0023508D /* Folding ClockTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Folding ClockTests-Info.plist"; sourceTree = "<group>"; };
 		371A9E51180D7F7B0023508D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		371A9E53180D7F7B0023508D /* NumberTweeningTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NumberTweeningTests.m; sourceTree = "<group>"; };
-		37A122B5180E259E002FA52E /* MFLFoldingDigit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFLFoldingDigit.h; sourceTree = "<group>"; };
-		37A122B6180E259E002FA52E /* MFLFoldingDigit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFLFoldingDigit.m; sourceTree = "<group>"; };
-		37A122B8180E25AB002FA52E /* MFLFoldingClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFLFoldingClock.h; sourceTree = "<group>"; };
-		37A122B9180E25AB002FA52E /* MFLFoldingClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFLFoldingClock.m; sourceTree = "<group>"; };
+		37A8DE1D180E511C003349D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		37A8DE1F180E511C003349D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		37A8DE21180E511C003349D1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		37A8DE22180E511C003349D1 /* Folding Clock-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Folding Clock-Info.plist"; sourceTree = "<group>"; };
+		37A8DE23180E511C003349D1 /* Folding Clock-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Folding Clock-Prefix.pch"; sourceTree = "<group>"; };
+		37A8DE24180E511C003349D1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		37A8DE25180E511C003349D1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		37A8DE26180E511C003349D1 /* MFLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFLAppDelegate.h; sourceTree = "<group>"; };
+		37A8DE27180E511C003349D1 /* MFLAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFLAppDelegate.m; sourceTree = "<group>"; };
+		37A8DE28180E511C003349D1 /* MFLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFLViewController.h; sourceTree = "<group>"; };
+		37A8DE29180E511C003349D1 /* MFLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFLViewController.m; sourceTree = "<group>"; };
+		37A8DE2B180E511C003349D1 /* MFLFoldingClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFLFoldingClock.h; sourceTree = "<group>"; };
+		37A8DE2C180E511C003349D1 /* MFLFoldingClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFLFoldingClock.m; sourceTree = "<group>"; };
+		37A8DE2D180E511C003349D1 /* MFLFoldingDigit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFLFoldingDigit.h; sourceTree = "<group>"; };
+		37A8DE2E180E511C003349D1 /* MFLFoldingDigit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFLFoldingDigit.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +91,7 @@
 		371A9E19180D7F7B0023508D = {
 			isa = PBXGroup;
 			children = (
-				371A9E2B180D7F7B0023508D /* NumberTweening */,
+				37A8DE1B180E511C003349D1 /* Folding Clock */,
 				371A9E4D180D7F7B0023508D /* NumberTweeningTests */,
 				371A9E24180D7F7B0023508D /* Frameworks */,
 				371A9E23180D7F7B0023508D /* Products */,
@@ -100,8 +101,8 @@
 		371A9E23180D7F7B0023508D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				371A9E22180D7F7B0023508D /* NumberTweening.app */,
-				371A9E46180D7F7B0023508D /* NumberTweeningTests.xctest */,
+				371A9E22180D7F7B0023508D /* Folding Clock.app */,
+				371A9E46180D7F7B0023508D /* Folding ClockTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,33 +118,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		371A9E2B180D7F7B0023508D /* NumberTweening */ = {
-			isa = PBXGroup;
-			children = (
-				371A9E5D180D81810023508D /* TweenClock */,
-				371A9E34180D7F7B0023508D /* MFLAppDelegate.h */,
-				371A9E35180D7F7B0023508D /* MFLAppDelegate.m */,
-				371A9E37180D7F7B0023508D /* Main_iPhone.storyboard */,
-				371A9E3A180D7F7B0023508D /* Main_iPad.storyboard */,
-				371A9E3D180D7F7B0023508D /* MFLViewController.h */,
-				371A9E3E180D7F7B0023508D /* MFLViewController.m */,
-				371A9E40180D7F7B0023508D /* Images.xcassets */,
-				371A9E2C180D7F7B0023508D /* Supporting Files */,
-			);
-			path = NumberTweening;
-			sourceTree = "<group>";
-		};
-		371A9E2C180D7F7B0023508D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				371A9E2D180D7F7B0023508D /* NumberTweening-Info.plist */,
-				371A9E2E180D7F7B0023508D /* InfoPlist.strings */,
-				371A9E31180D7F7B0023508D /* main.m */,
-				371A9E33180D7F7B0023508D /* NumberTweening-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		371A9E4D180D7F7B0023508D /* NumberTweeningTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,19 +130,38 @@
 		371A9E4E180D7F7B0023508D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				371A9E4F180D7F7B0023508D /* NumberTweeningTests-Info.plist */,
+				371A9E4F180D7F7B0023508D /* Folding ClockTests-Info.plist */,
 				371A9E50180D7F7B0023508D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		371A9E5D180D81810023508D /* TweenClock */ = {
+		37A8DE1B180E511C003349D1 /* Folding Clock */ = {
 			isa = PBXGroup;
 			children = (
-				37A122B5180E259E002FA52E /* MFLFoldingDigit.h */,
-				37A122B6180E259E002FA52E /* MFLFoldingDigit.m */,
-				37A122B8180E25AB002FA52E /* MFLFoldingClock.h */,
-				37A122B9180E25AB002FA52E /* MFLFoldingClock.m */,
+				37A8DE1C180E511C003349D1 /* Main_iPad.storyboard */,
+				37A8DE1E180E511C003349D1 /* Main_iPhone.storyboard */,
+				37A8DE20180E511C003349D1 /* InfoPlist.strings */,
+				37A8DE22180E511C003349D1 /* Folding Clock-Info.plist */,
+				37A8DE23180E511C003349D1 /* Folding Clock-Prefix.pch */,
+				37A8DE24180E511C003349D1 /* Images.xcassets */,
+				37A8DE25180E511C003349D1 /* main.m */,
+				37A8DE26180E511C003349D1 /* MFLAppDelegate.h */,
+				37A8DE27180E511C003349D1 /* MFLAppDelegate.m */,
+				37A8DE28180E511C003349D1 /* MFLViewController.h */,
+				37A8DE29180E511C003349D1 /* MFLViewController.m */,
+				37A8DE2A180E511C003349D1 /* TweenClock */,
+			);
+			path = "Folding Clock";
+			sourceTree = "<group>";
+		};
+		37A8DE2A180E511C003349D1 /* TweenClock */ = {
+			isa = PBXGroup;
+			children = (
+				37A8DE2B180E511C003349D1 /* MFLFoldingClock.h */,
+				37A8DE2C180E511C003349D1 /* MFLFoldingClock.m */,
+				37A8DE2D180E511C003349D1 /* MFLFoldingDigit.h */,
+				37A8DE2E180E511C003349D1 /* MFLFoldingDigit.m */,
 			);
 			path = TweenClock;
 			sourceTree = "<group>";
@@ -176,9 +169,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		371A9E21180D7F7B0023508D /* NumberTweening */ = {
+		371A9E21180D7F7B0023508D /* Folding Clock */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 371A9E57180D7F7B0023508D /* Build configuration list for PBXNativeTarget "NumberTweening" */;
+			buildConfigurationList = 371A9E57180D7F7B0023508D /* Build configuration list for PBXNativeTarget "Folding Clock" */;
 			buildPhases = (
 				371A9E1E180D7F7B0023508D /* Sources */,
 				371A9E1F180D7F7B0023508D /* Frameworks */,
@@ -188,14 +181,14 @@
 			);
 			dependencies = (
 			);
-			name = NumberTweening;
+			name = "Folding Clock";
 			productName = NumberTweening;
-			productReference = 371A9E22180D7F7B0023508D /* NumberTweening.app */;
+			productReference = 371A9E22180D7F7B0023508D /* Folding Clock.app */;
 			productType = "com.apple.product-type.application";
 		};
-		371A9E45180D7F7B0023508D /* NumberTweeningTests */ = {
+		371A9E45180D7F7B0023508D /* Folding ClockTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 371A9E5A180D7F7B0023508D /* Build configuration list for PBXNativeTarget "NumberTweeningTests" */;
+			buildConfigurationList = 371A9E5A180D7F7B0023508D /* Build configuration list for PBXNativeTarget "Folding ClockTests" */;
 			buildPhases = (
 				371A9E42180D7F7B0023508D /* Sources */,
 				371A9E43180D7F7B0023508D /* Frameworks */,
@@ -206,9 +199,9 @@
 			dependencies = (
 				371A9E4C180D7F7B0023508D /* PBXTargetDependency */,
 			);
-			name = NumberTweeningTests;
+			name = "Folding ClockTests";
 			productName = NumberTweeningTests;
-			productReference = 371A9E46180D7F7B0023508D /* NumberTweeningTests.xctest */;
+			productReference = 371A9E46180D7F7B0023508D /* Folding ClockTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -226,7 +219,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 371A9E1D180D7F7B0023508D /* Build configuration list for PBXProject "NumberTweening" */;
+			buildConfigurationList = 371A9E1D180D7F7B0023508D /* Build configuration list for PBXProject "Folding Clock" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -239,8 +232,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				371A9E21180D7F7B0023508D /* NumberTweening */,
-				371A9E45180D7F7B0023508D /* NumberTweeningTests */,
+				371A9E21180D7F7B0023508D /* Folding Clock */,
+				371A9E45180D7F7B0023508D /* Folding ClockTests */,
 			);
 		};
 /* End PBXProject section */
@@ -250,10 +243,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				371A9E3C180D7F7B0023508D /* Main_iPad.storyboard in Resources */,
-				371A9E41180D7F7B0023508D /* Images.xcassets in Resources */,
-				371A9E39180D7F7B0023508D /* Main_iPhone.storyboard in Resources */,
-				371A9E30180D7F7B0023508D /* InfoPlist.strings in Resources */,
+				37A8DE32180E511C003349D1 /* Main_iPhone.storyboard in Resources */,
+				37A8DE35180E511C003349D1 /* Images.xcassets in Resources */,
+				37A8DE33180E511C003349D1 /* InfoPlist.strings in Resources */,
+				37A8DE34180E511C003349D1 /* Folding Clock-Info.plist in Resources */,
+				37A8DE31180E511C003349D1 /* Main_iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,11 +266,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37A122BA180E25AB002FA52E /* MFLFoldingClock.m in Sources */,
-				371A9E3F180D7F7B0023508D /* MFLViewController.m in Sources */,
-				37A122B7180E259E002FA52E /* MFLFoldingDigit.m in Sources */,
-				371A9E36180D7F7B0023508D /* MFLAppDelegate.m in Sources */,
-				371A9E32180D7F7B0023508D /* main.m in Sources */,
+				37A8DE38180E511C003349D1 /* MFLViewController.m in Sources */,
+				37A8DE37180E511C003349D1 /* MFLAppDelegate.m in Sources */,
+				37A8DE3A180E511C003349D1 /* MFLFoldingDigit.m in Sources */,
+				37A8DE39180E511C003349D1 /* MFLFoldingClock.m in Sources */,
+				37A8DE36180E511C003349D1 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,40 +287,40 @@
 /* Begin PBXTargetDependency section */
 		371A9E4C180D7F7B0023508D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 371A9E21180D7F7B0023508D /* NumberTweening */;
+			target = 371A9E21180D7F7B0023508D /* Folding Clock */;
 			targetProxy = 371A9E4B180D7F7B0023508D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		371A9E2E180D7F7B0023508D /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				371A9E2F180D7F7B0023508D /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		371A9E37180D7F7B0023508D /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				371A9E38180D7F7B0023508D /* Base */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		371A9E3A180D7F7B0023508D /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				371A9E3B180D7F7B0023508D /* Base */,
-			);
-			name = Main_iPad.storyboard;
-			sourceTree = "<group>";
-		};
 		371A9E50180D7F7B0023508D /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				371A9E51180D7F7B0023508D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		37A8DE1C180E511C003349D1 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37A8DE1D180E511C003349D1 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		37A8DE1E180E511C003349D1 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37A8DE1F180E511C003349D1 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		37A8DE20180E511C003349D1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37A8DE21180E511C003349D1 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -414,9 +408,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NumberTweening/NumberTweening-Prefix.pch";
-				INFOPLIST_FILE = "NumberTweening/NumberTweening-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Folding Clock/Folding Clock-Prefix.pch";
+				INFOPLIST_FILE = "Folding Clock/Folding Clock-Info.plist";
+				PRODUCT_NAME = "Folding Clock";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -427,9 +421,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NumberTweening/NumberTweening-Prefix.pch";
-				INFOPLIST_FILE = "NumberTweening/NumberTweening-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Folding Clock/Folding Clock-Prefix.pch";
+				INFOPLIST_FILE = "Folding Clock/Folding Clock-Info.plist";
+				PRODUCT_NAME = "Folding Clock";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -450,8 +444,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "NumberTweeningTests/NumberTweeningTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "NumberTweeningTests/Folding ClockTests-Info.plist";
+				PRODUCT_NAME = "Folding ClockTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -469,8 +463,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NumberTweening/NumberTweening-Prefix.pch";
-				INFOPLIST_FILE = "NumberTweeningTests/NumberTweeningTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "NumberTweeningTests/Folding ClockTests-Info.plist";
+				PRODUCT_NAME = "Folding ClockTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -479,7 +473,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		371A9E1D180D7F7B0023508D /* Build configuration list for PBXProject "NumberTweening" */ = {
+		371A9E1D180D7F7B0023508D /* Build configuration list for PBXProject "Folding Clock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				371A9E55180D7F7B0023508D /* Debug */,
@@ -488,7 +482,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		371A9E57180D7F7B0023508D /* Build configuration list for PBXNativeTarget "NumberTweening" */ = {
+		371A9E57180D7F7B0023508D /* Build configuration list for PBXNativeTarget "Folding Clock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				371A9E58180D7F7B0023508D /* Debug */,
@@ -497,7 +491,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		371A9E5A180D7F7B0023508D /* Build configuration list for PBXNativeTarget "NumberTweeningTests" */ = {
+		371A9E5A180D7F7B0023508D /* Build configuration list for PBXNativeTarget "Folding ClockTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				371A9E5B180D7F7B0023508D /* Debug */,

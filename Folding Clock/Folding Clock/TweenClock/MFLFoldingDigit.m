@@ -23,52 +23,6 @@
 
 @implementation MFLFoldingDigit
 
-
-- (void)drawRect:(CGRect)rect
-{
-    CGContextRef context = UIGraphicsGetCurrentContext();
-}
-//    ctx.clearRect(0, 0, 200, 200);
-//    ctx.beginPath();
-//
-//    var current = points{i};
-//    var next = points{j};
-//    var curr1 = control_one{i};
-//    var next1 = control_one{j};
-//    var curr2 = control_two{i};
-//    var next2 = control_two{j};
-//
-//    // Interpolated value.
-//    frame = getInterpolation(frame);
-//
-//    // First point.
-//    ctx.moveTo(current{0}{0} + ((next{0}{0} - current{0}{0}) * frame),
-//               current{0}{1} + ((next{0}{1} - current{0}{1}) * frame));
-//
-//    // Rest of the points connected as bezier curve.
-//    for (var index = 1; index < 5; index++) {
-//        ctx.bezierCurveTo(
-//                          curr1{index-1}{0} + ((next1{index-1}{0} - curr1{index-1}{0}) * frame),
-//                          curr1{index-1}{1} + ((next1{index-1}{1} - curr1{index-1}{1}) * frame),
-//                          curr2{index-1}{0} + ((next2{index-1}{0} - curr2{index-1}{0}) * frame),
-//                          curr2{index-1}{1} + ((next2{index-1}{1} - curr2{index-1}{1}) * frame),
-//                          current{index}{0} + ((next{index}{0} - current{index}{0}) * frame),
-//                          current{index}{1} + ((next{index}{1} - current{index}{1}) * frame));
-//    }
-//
-//    ctx.stroke();
-//
-// var canvas = document.getElementById('canvas');
-// var ctx = canvas.getContext('2d');
-// ctx.strokeStyle = '#FFFFFF';
-// ctx.lineWidth = 5;
-//
-// var current = 0;
-// var next = 1;
-// var frame = 0;
-
-///*
-//
 static CGPoint points[10][5] =
 {
     {
@@ -178,45 +132,6 @@ static CGPoint controlTwo[10][4] =
     return (cosf(((input + 1)) * M_PI) / 2) + 0.5;
 }
 
-//
-///**
-// * Draws each frame of the animation.
-// */
-//function draw(i, j, frame) {
-//}
-//
-///*
-// * Each number change is divided into 10 frames.
-// * First two frames and last two frames are static.
-// * Acceleration-Deceleration happens in the in-between 6 frames.
-// */
-//function nextFrame() {
-//    // Frames 0, 1 is the first pause.
-//    // Frames 9, 10 is the last pause.
-//    if (frame >= 2 && frame <= 8) {
-//        draw (current, next, (frame - 2) / 6);
-//    }
-//
-//    frame++;
-//
-//    // Each number change has 10 frames. Reset.
-//    if (frame == 10) {
-//        frame = 0;
-//        current = next;
-//        next++;
-//
-//        // Reset to zarro.
-//        if (next == 10) {
-//            next = 0;
-//        }
-//    }
-//
-//    setTimeout(nextFrame, 100);
-//}
-//
-//// Start the animation.
-//setTimeout(nextFrame, 100);
-// */
 #pragma mark Initialization
 - (id)initWithFrame:(CGRect)frame andDigit:(NSInteger)initialDigit
 {
@@ -225,7 +140,7 @@ static CGPoint controlTwo[10][4] =
         // Initialization code
         _transformDuration = .6;
         _lineThickness = 3;
-        _strokeColor = [[UIColor whiteColor] CGColor];
+        _strokeColor = [[UIColor brownColor] CGColor];
         _drawnDigits = [@[] mutableCopy];
         
         [self initializeSegments:initialDigit];
@@ -284,10 +199,10 @@ static CGPoint controlTwo[10][4] =
     
     [self.drawnDigits enumerateObjectsUsingBlock:^(CAShapeLayer *segment, NSUInteger idx, BOOL *stop) {
         UIBezierPath *newPath = [[UIBezierPath alloc] init];
-        [newPath moveToPoint:[self transformPoint:points[digit][idx] withFrame:frame]];
-        [newPath addCurveToPoint:[self transformPoint:points[digit][idx+1] withFrame:frame]
-                   controlPoint1:[self transformPoint:controlOne[digit][idx] withFrame:frame]
-                   controlPoint2:[self transformPoint:controlTwo[digit][idx] withFrame:frame]];
+        [newPath moveToPoint:points[digit][idx]];
+        [newPath addCurveToPoint:points[digit][idx+1]
+                   controlPoint1:controlOne[digit][idx]
+                   controlPoint2:controlTwo[digit][idx]];
         
         
         CABasicAnimation *pathAnim = [CABasicAnimation animationWithKeyPath:@"path"];
@@ -303,12 +218,6 @@ static CGPoint controlTwo[10][4] =
     }];
 }
 
-- (CGPoint)transformPoint:(CGPoint)transformPoint withFrame:(CGFloat)frame
-{
-    //flipPoint = CGPointMake(flipPoint.x, self.frame.size.height - flipPoint.y);
-#pragma mark To Be Implemented
-    return transformPoint;
-}
 
 - (void)decrement
 {
@@ -319,13 +228,5 @@ static CGPoint controlTwo[10][4] =
 {
     [self animateToDigit:(self.currentDigit + 1) % 10];
 }
-/*
- // Only override drawRect: if you perform custom drawing.
- // An empty implementation adversely affects performance during animation.
- - (void)drawRect:(CGRect)rect
- {
- // Drawing code
- }
- */
 
 @end
