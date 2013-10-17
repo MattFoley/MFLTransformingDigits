@@ -21,13 +21,14 @@
 {
     [super viewDidLoad];
     
-    self.digitTest = [[MFLFoldingDigit alloc] initWithFrame:CGRectMake(0, 0, 200, 200) andDigit:0];
+    self.digitTest = [[MFLFoldingDigit alloc] initFlatWithFrame:CGRectMake(0, 0, 200, 200) andDigit:0];
     
     [self.digitTest setBackgroundColor:[UIColor clearColor]];
     [self.digitTest setStrokeColor:[UIColor whiteColor].CGColor];
     
     [self.view addSubview:self.digitTest];
     [self.digitTest setCenter:self.view.center];
+    [self.digitTest setAnimationStyle:kMFLCubicKeyframe];
     
     double delayInSeconds = 1.0;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));

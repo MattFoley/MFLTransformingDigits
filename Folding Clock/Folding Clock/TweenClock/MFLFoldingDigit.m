@@ -6,6 +6,11 @@
 //  Copyright (c) 2013 MFL. All rights reserved.
 //
 
+typedef enum {
+    kMFLSingleLineFold,
+    kMFLSegmentFold
+} MFLFoldingStyle;
+
 #import "MFLFoldingDigit.h"
 
 @interface MFLFoldingDigit()
@@ -17,8 +22,10 @@
 @property NSInteger currentDigit;
 
 @property UIBezierPath *drawPath;
-@property NSMutableArray *drawnDigits;
+@property NSMutableArray *drawnSegments;
+@property CAShapeLayer *drawnDigit;
 
+@property MFLFoldingStyle foldingStyle;
 @end
 
 @implementation MFLFoldingDigit
@@ -133,24 +140,65 @@ static CGPoint controlTwo[10][4] =
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        _transformDuration = .6;
-        _lineThickness = 3;
-        _strokeColor = [[UIColor brownColor] CGColor];
-        _drawnDigits = [@[] mutableCopy];
-        
+        [self sharedInit];
         [self initializeSegments:initialDigit];
+        
+        _foldingStyle = kMFLSegmentFold;
     }
     
     return self;
 }
 
+- (id)initFlatWithFrame:(CGRect)frame andDigit:(NSInteger)initialDigit
+{
+    self = [super initWithFrame:frame];
+    if (self) {
+        // Initialization code
+        [self sharedInit];
+        [self initializeLayer:initialDigit];
+        
+        _foldingStyle = kMFLSingleLineFold;
+    }
+    
+    return self;
+}
+
+- (void)sharedInit
+{
+    _calculationMode = kCAAnimationCubic;
+    _timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    
+    _transformDuration = .6;
+    _lineThickness = 3;
+    _strokeColor = [[UIColor brownColor] CGColor];
+    
+    _drawnSegments = [@[] mutableCopy];
+}
+
+- (void)initializeLayer:(NSInteger)initialDigit
+{
+    self.drawnDigit = [[CAShapeLayer alloc] init];
+    
+    [self.drawnDigit setBounds:self.bounds];
+    [self.drawnDigit setPosition:self.center];
+    [self.drawnDigit setFillColor:[[UIColor clearColor] CGColor]];
+    [self.drawnDigit setStrokeColor:_strokeColor];
+    [self.drawnDigit setLineWidth:_lineThickness];
+    [self.drawnDigit setLineJoin:kCALineJoinRound];
+    
+    UIBezierPath *newPath = [self linePathForDigit:initialDigit];
+    [self.drawnDigit setPath:newPath.CGPath];
+    
+    [self.layer addSublayer:self.drawnDigit];
+}
+
 - (void)initializeSegments:(NSInteger)initialDigit
 {
     for (int i = 0; i < 4; i++) {
-        _drawnDigits[i] = [[CAShapeLayer alloc] init];
+        _drawnSegments[i] = [[CAShapeLayer alloc] init];
     }
     
-    [_drawnDigits enumerateObjectsUsingBlock:^(CAShapeLayer *segment, NSUInteger idx, BOOL *stop) {
+    [_drawnSegments enumerateObjectsUsingBlock:^(CAShapeLayer *segment, NSUInteger idx, BOOL *stop) {
         [segment setBounds:self.bounds];
         [segment setPosition:self.center];
         [segment setFillColor:[[UIColor clearColor] CGColor]];
@@ -158,20 +206,16 @@ static CGPoint controlTwo[10][4] =
         [segment setLineWidth:_lineThickness];
         [segment setLineJoin:kCALineJoinRound];
         
-        UIBezierPath *newPath = [[UIBezierPath alloc] init];
-        [newPath moveToPoint:points[initialDigit][idx]];
-        [newPath addCurveToPoint:points[initialDigit][idx+1]
-                   controlPoint1:controlOne[initialDigit][idx]
-                   controlPoint2:controlTwo[initialDigit][idx]];
-        
+        UIBezierPath *newPath = [self segmentPathForDigit:initialDigit atIndex:idx];
         [segment setPath:newPath.CGPath];
+        
         [self.layer addSublayer:segment];
     }];
 }
 
 - (void)setLineThickness:(CGFloat)lineThickness
 {
-    [_drawnDigits enumerateObjectsUsingBlock:^(CAShapeLayer *segment, NSUInteger idx, BOOL *stop) {
+    [_drawnSegments enumerateObjectsUsingBlock:^(CAShapeLayer *segment, NSUInteger idx, BOOL *stop) {
         [segment setLineWidth:lineThickness];
     }];
     
@@ -180,34 +224,42 @@ static CGPoint controlTwo[10][4] =
 
 - (void)setStrokeColor:(CGColorRef)strokeColor
 {
-    [_drawnDigits enumerateObjectsUsingBlock:^(CAShapeLayer *segment, NSUInteger idx, BOOL *stop) {
+    [_drawnSegments enumerateObjectsUsingBlock:^(CAShapeLayer *segment, NSUInteger idx, BOOL *stop) {
         [segment setStrokeColor:strokeColor];
     }];
     
     _strokeColor = strokeColor;
 }
 
+
+
 - (void)animateToDigit:(NSInteger)digit
+{
+    switch (self.foldingStyle) {
+        case kMFLSegmentFold:
+        {
+            [self animateSegmentsToDigit:digit];
+            break;
+        }
+        case kMFLSingleLineFold:
+        {
+            [self animateToDigitFlat:digit];
+            break;
+        }
+        default:
+            break;
+    }
+}
+
+- (void)animateSegmentsToDigit:(NSInteger)digit
 {
     self.currentDigit = digit;
     
-    [self.drawnDigits enumerateObjectsUsingBlock:^(CAShapeLayer *segment, NSUInteger idx, BOOL *stop) {
-        UIBezierPath *newPath = [[UIBezierPath alloc] init];
-        [newPath moveToPoint:points[digit][idx]];
-        [newPath addCurveToPoint:points[digit][idx+1]
-                   controlPoint1:controlOne[digit][idx]
-                   controlPoint2:controlTwo[digit][idx]];
+    [self.drawnSegments enumerateObjectsUsingBlock:^(CAShapeLayer *segment, NSUInteger idx, BOOL *stop) {
+        UIBezierPath *newPath = [self segmentPathForDigit:digit atIndex:idx];
         
-        
-        CABasicAnimation *pathAnim = [CABasicAnimation animationWithKeyPath:@"path"];
-        pathAnim.fromValue = (__bridge id)segment.path;
-        pathAnim.toValue = (__bridge id)newPath.CGPath;
-        pathAnim.duration = 2;
-        pathAnim.fillMode = kCAFillModeForwards;
-        CAMediaTimingFunction *customTimingFunction;
-        customTimingFunction=[CAMediaTimingFunction functionWithControlPoints:0.25f :0.1f :0.25f :1.0f];
-        
-        pathAnim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+        [self animationForPath:newPath];
+        CABasicAnimation *pathAnim = (CABasicAnimation *)[self animationForPath:newPath];
         
         [segment addAnimation:pathAnim forKey:@"segmentTransform"];
         
@@ -215,9 +267,116 @@ static CGPoint controlTwo[10][4] =
     }];
 }
 
+- (void)animateToDigitFlat:(NSInteger)digit
+{
+    self.currentDigit = digit;
+    
+    UIBezierPath *newPath = [self linePathForDigit:digit];
+    CABasicAnimation *pathAnim = (CABasicAnimation *)[self animationForPath:newPath];
+    
+    [self.drawnDigit addAnimation:pathAnim forKey:@"segmentTransform"];
+    
+    [self.drawnDigit setPath:newPath.CGPath];
+}
+
+#pragma mark Animations
+
+- (CAPropertyAnimation *)animationForPath:(UIBezierPath *)path
+{
+    switch (self.animationStyle) {
+        case kMFLBounce:
+        {
+            return [self bounceAnimationForPath:path];
+            break;
+        }
+        case kMFLSmooth:
+        {
+            return [self smoothAnimationForPath:path];
+            break;
+        }
+        case kMFLCubicKeyframe:
+        {
+            return [self keyframeAnimationForPath:path];
+            break;
+        }
+            
+        default:
+            return nil;
+            break;
+    }
+}
+
+- (CAKeyframeAnimation *)keyframeAnimationForPath:(UIBezierPath *)path
+{
+    CAKeyframeAnimation *pathAnim = [CAKeyframeAnimation animationWithKeyPath:@"path"];
+    
+    pathAnim.values = @[(__bridge id)self.drawnDigit.path, (__bridge id)path.CGPath];
+    pathAnim.duration = 2;
+    
+    pathAnim.calculationMode = self.calculationMode;
+    
+    pathAnim.fillMode = kCAFillModeForwards;
+    pathAnim.timingFunction = self.timingFunction;
+    
+    return pathAnim;
+}
+
+- (CAPropertyAnimation *)bounceAnimationForPath:(UIBezierPath *)path
+{
+    CABasicAnimation *pathAnim = [CABasicAnimation animationWithKeyPath:@"path"];
+    
+    pathAnim.fromValue = (__bridge id)self.drawnDigit.path;
+    pathAnim.toValue = (__bridge id)path.CGPath;
+    pathAnim.duration = 2;
+    pathAnim.fillMode = kCAFillModeForwards;
+    pathAnim.timingFunction = self.timingFunction;
+    
+    return pathAnim;
+}
+
+- (CAPropertyAnimation *)smoothAnimationForPath:(UIBezierPath *)path
+{
+    CABasicAnimation *pathAnim = [CABasicAnimation animationWithKeyPath:@"path"];
+    
+    pathAnim.fromValue = (__bridge id)self.drawnDigit.path;
+    pathAnim.toValue = (__bridge id)path.CGPath;
+    pathAnim.duration = 2;
+    pathAnim.fillMode = kCAFillModeForwards;
+    pathAnim.timingFunction = self.timingFunction;
+    
+    return pathAnim;
+}
+
+#pragma mark Paths
+
+- (UIBezierPath *)segmentPathForDigit:(NSInteger)digit atIndex:(NSInteger) idx
+{
+    UIBezierPath *newPath = [[UIBezierPath alloc] init];
+    [newPath moveToPoint:points[digit][idx]];
+    [newPath addCurveToPoint:points[digit][idx+1]
+               controlPoint1:controlOne[digit][idx]
+               controlPoint2:controlTwo[digit][idx]];
+    return newPath;
+}
+
+- (UIBezierPath *)linePathForDigit:(NSInteger)digit
+{
+    UIBezierPath *newPath = [[UIBezierPath alloc] init];
+    [newPath moveToPoint:points[digit][0]];
+    
+    for (int idx = 0; idx < 4; idx++) {
+        [newPath addCurveToPoint:points[digit][idx+1]
+                   controlPoint1:controlOne[digit][idx]
+                   controlPoint2:controlTwo[digit][idx]];
+    }
+
+    return newPath;
+}
+
 
 - (void)decrement
 {
+    
     [self animateToDigit:(self.currentDigit - 1) % 10];
 }
 
