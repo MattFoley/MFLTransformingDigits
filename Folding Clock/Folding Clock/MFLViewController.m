@@ -29,6 +29,8 @@
     [self.view addSubview:self.digitTest];
     [self.digitTest setCenter:self.view.center];
     [self.digitTest setAnimationStyle:kMFLCubicKeyframe];
+    [self.digitTest setRotateStyle:kMFLHorizontal3D];
+    [self.digitTest setShouldRotateIn2D:YES];
     
     double delayInSeconds = 1.0;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));

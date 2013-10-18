@@ -14,6 +14,13 @@ typedef enum {
     kMFLCubicKeyframe
 } MFLAnimationStyle;
 
+typedef enum {
+    kMFLVertical3D,
+    kMFLHorizontal3D,
+    kMFLFull3D,
+    kMFLNoRotate
+} MFLRotateAnimationStyle;
+
 @interface MFLFoldingDigit : UIView
 
 @property (nonatomic) CGColorRef strokeColor;
@@ -25,6 +32,11 @@ typedef enum {
 @property NSString *calculationMode;
 @property id timingFunction;
 @property MFLAnimationStyle animationStyle;
+
+//Animation addons
+@property MFLRotateAnimationStyle rotateStyle;
+
+@property BOOL shouldRotateIn2D;
 
 - (id)initFlatWithFrame:(CGRect)frame andDigit:(NSInteger)initialDigit;
 - (id)initWithFrame:(CGRect)frame andDigit:(NSInteger)initialDigit;

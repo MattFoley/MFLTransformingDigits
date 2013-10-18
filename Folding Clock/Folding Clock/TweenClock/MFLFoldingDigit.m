@@ -170,9 +170,13 @@ static CGPoint controlTwo[10][4] =
     
     _transformDuration = .6;
     _lineThickness = 3;
-    _strokeColor = [[UIColor brownColor] CGColor];
+    _strokeColor = [[UIColor whiteColor] CGColor];
     
     _drawnSegments = [@[] mutableCopy];
+    
+    _rotateStyle = kMFLVertical3D;
+    
+    _shouldRotateIn2D = NO;
 }
 
 - (void)initializeLayer:(NSInteger)initialDigit
@@ -257,61 +261,156 @@ static CGPoint controlTwo[10][4] =
     
     [self.drawnSegments enumerateObjectsUsingBlock:^(CAShapeLayer *segment, NSUInteger idx, BOOL *stop) {
         UIBezierPath *newPath = [self segmentPathForDigit:digit atIndex:idx];
-        
-        [self animationForPath:newPath];
-        CABasicAnimation *pathAnim = (CABasicAnimation *)[self animationForPath:newPath];
-        
-        [segment addAnimation:pathAnim forKey:@"segmentTransform"];
-        
-        [segment setPath:newPath.CGPath];
+        [self attachAnimationForPath:newPath toLayer:segment];
     }];
 }
 
 - (void)animateToDigitFlat:(NSInteger)digit
 {
     self.currentDigit = digit;
-    
     UIBezierPath *newPath = [self linePathForDigit:digit];
-    CABasicAnimation *pathAnim = (CABasicAnimation *)[self animationForPath:newPath];
     
-    [self.drawnDigit addAnimation:pathAnim forKey:@"segmentTransform"];
-    
-    [self.drawnDigit setPath:newPath.CGPath];
+    [self attachAnimationForPath:newPath toLayer:self.drawnDigit];
+}
+
+- (void)attachAnimationForPath:(UIBezierPath *)path toLayer:(CAShapeLayer *)layer
+{
+    CAAnimationGroup *pathAnim = (CAAnimationGroup *)[self animationForPath:path fromPath:layer.path];
+    [layer addAnimation:pathAnim forKey:@"segmentTransform"];
+    [layer setPath:path.CGPath];
 }
 
 #pragma mark Animations
 
-- (CAPropertyAnimation *)animationForPath:(UIBezierPath *)path
+- (CAAnimationGroup *)animationForPath:(UIBezierPath *)path fromPath:(CGPathRef)fromPath
+{
+    NSMutableArray *animations = [@[] mutableCopy];
+    
+    [animations addObject:[self getBasicAnimationForPath:path fromPath:fromPath]];
+    
+    [self add3DRotateAnimationToArray:animations];
+    
+    if (self.shouldRotateIn2D) {
+        [animations addObject:[self rotate2DAnimation]];
+    }
+    
+    
+    CAAnimationGroup *group = [[CAAnimationGroup alloc] init];
+    group.animations = [animations copy];
+    
+    group.duration = self.transformDuration;
+    
+    return group;
+}
+
+- (CAAnimation *)getBasicAnimationForPath:(UIBezierPath *)path fromPath:(CGPathRef)fromPath
 {
     switch (self.animationStyle) {
         case kMFLBounce:
         {
-            return [self bounceAnimationForPath:path];
+            return [self bounceAnimationForPath:path fromPath:fromPath];
             break;
         }
         case kMFLSmooth:
         {
-            return [self smoothAnimationForPath:path];
+            return [self smoothAnimationForPath:path fromPath:fromPath];
             break;
         }
         case kMFLCubicKeyframe:
         {
-            return [self keyframeAnimationForPath:path];
+            return [self keyframeAnimationForPath:path fromPath:fromPath];
             break;
         }
             
         default:
-            return nil;
             break;
     }
 }
 
-- (CAKeyframeAnimation *)keyframeAnimationForPath:(UIBezierPath *)path
+- (void)add3DRotateAnimationToArray:(NSMutableArray*)animations
+{
+    switch (self.rotateStyle) {
+        case kMFLFull3D:
+        {
+            [animations addObject:[self rotate3DFullAnimation]];
+            break;
+        }
+        case kMFLHorizontal3D:
+        {
+            [animations addObject:[self rotate3DHorizontalAnimation]];
+            break;
+        }
+        case kMFLVertical3D:
+        {
+            [animations addObject:[self rotate3DVerticalAnimation]];
+            break;
+        }
+        case kMFLNoRotate:
+        default:
+            break;
+    }
+    
+}
+
+- (CAKeyframeAnimation *)rotate3DHorizontalAnimation
+{
+    CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
+    animation.duration = self.transformDuration;
+    animation.values = @[[NSValue valueWithCATransform3D:CATransform3DIdentity],
+                         [NSValue valueWithCATransform3D:CATransform3DMakeRotation(.5 * M_PI, 0, 1, 0)],
+                         [NSValue valueWithCATransform3D:CATransform3DMakeRotation(M_PI, 0, 1, 0)],
+                         [NSValue valueWithCATransform3D:CATransform3DMakeRotation(1.5 * M_PI, 0, 1, 0)],
+                         [NSValue valueWithCATransform3D:CATransform3DMakeRotation(2 * M_PI, 0, 1, 0)]];
+    
+    animation.autoreverses = NO;
+    return animation;
+}
+
+- (CAKeyframeAnimation *)rotate3DVerticalAnimation
+{
+    CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
+    animation.duration = self.transformDuration;
+    animation.values = @[[NSValue valueWithCATransform3D:CATransform3DIdentity],
+                         [NSValue valueWithCATransform3D:CATransform3DMakeRotation(.5 * M_PI, 1, 0, 0)],
+                         [NSValue valueWithCATransform3D:CATransform3DMakeRotation(M_PI, 1, 0, 0)],
+                         [NSValue valueWithCATransform3D:CATransform3DMakeRotation(1.5 * M_PI, 1, 0, 0)],
+                         [NSValue valueWithCATransform3D:CATransform3DMakeRotation(2 * M_PI, 1, 0, 0)]];
+    
+    animation.autoreverses = NO;
+    return animation;
+}
+
+- (CAKeyframeAnimation *)rotate3DFullAnimation
+{
+    CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"transform"];
+    animation.duration = self.transformDuration;
+    animation.values = @[[NSValue valueWithCATransform3D:CATransform3DIdentity],
+                         [NSValue valueWithCATransform3D:CATransform3DMakeRotation(.5 * M_PI, 1, 1, 0)],
+                         [NSValue valueWithCATransform3D:CATransform3DMakeRotation(M_PI, 1, 1, 0)],
+                         [NSValue valueWithCATransform3D:CATransform3DMakeRotation(1.5 * M_PI, 1, 1, 0)],
+                         [NSValue valueWithCATransform3D:CATransform3DMakeRotation(2 * M_PI, 1, 1, 0)]];
+    
+    animation.autoreverses = NO;
+    return animation;
+}
+
+
+- (CABasicAnimation *)rotate2DAnimation
+{
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation"];
+    animation.duration = self.transformDuration;
+    animation.fromValue = [NSNumber numberWithFloat:0];
+    animation.toValue = [NSNumber numberWithFloat:2 * M_PI];
+    animation.autoreverses = NO;
+    return animation;
+}
+
+- (CAKeyframeAnimation *)keyframeAnimationForPath:(UIBezierPath *)path fromPath:(CGPathRef)fromPath
 {
     CAKeyframeAnimation *pathAnim = [CAKeyframeAnimation animationWithKeyPath:@"path"];
     
-    pathAnim.values = @[(__bridge id)self.drawnDigit.path, (__bridge id)path.CGPath];
-    pathAnim.duration = 2;
+    pathAnim.values = @[(__bridge id)fromPath, (__bridge id)path.CGPath];
+    pathAnim.duration = self.transformDuration;
     
     pathAnim.calculationMode = self.calculationMode;
     
@@ -321,26 +420,26 @@ static CGPoint controlTwo[10][4] =
     return pathAnim;
 }
 
-- (CAPropertyAnimation *)bounceAnimationForPath:(UIBezierPath *)path
+- (CAPropertyAnimation *)bounceAnimationForPath:(UIBezierPath *)path fromPath:(CGPathRef)fromPath
 {
     CABasicAnimation *pathAnim = [CABasicAnimation animationWithKeyPath:@"path"];
     
-    pathAnim.fromValue = (__bridge id)self.drawnDigit.path;
+    pathAnim.fromValue = (__bridge id)fromPath;
     pathAnim.toValue = (__bridge id)path.CGPath;
-    pathAnim.duration = 2;
+    pathAnim.duration = self.transformDuration;
     pathAnim.fillMode = kCAFillModeForwards;
     pathAnim.timingFunction = self.timingFunction;
     
     return pathAnim;
 }
 
-- (CAPropertyAnimation *)smoothAnimationForPath:(UIBezierPath *)path
+- (CAPropertyAnimation *)smoothAnimationForPath:(UIBezierPath *)path fromPath:(CGPathRef)fromPath
 {
     CABasicAnimation *pathAnim = [CABasicAnimation animationWithKeyPath:@"path"];
     
-    pathAnim.fromValue = (__bridge id)self.drawnDigit.path;
+    pathAnim.fromValue = (__bridge id)fromPath;
     pathAnim.toValue = (__bridge id)path.CGPath;
-    pathAnim.duration = 2;
+    pathAnim.duration = self.transformDuration;
     pathAnim.fillMode = kCAFillModeForwards;
     pathAnim.timingFunction = self.timingFunction;
     
