@@ -135,6 +135,22 @@ static CGPoint controlTwo[10][4] =
 };
 
 #pragma mark Initialization
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    
+    if (self) {
+        // Initialization code
+        [self sharedInit];
+        [self initializeLayer:0];
+        
+        _foldingStyle = kMFLSingleLineFold;
+    }
+    
+    return self;
+}
+
 - (id)initWithFrame:(CGRect)frame andDigit:(NSInteger)initialDigit
 {
     self = [super initWithFrame:frame];
@@ -163,27 +179,33 @@ static CGPoint controlTwo[10][4] =
     return self;
 }
 
+/*
+ CGAffineTransform transform = CGAffineTransformFromRectToRect(CGRectMake((self.frame.origin.x + (200-self.frame.size.width)),
+ (self.frame.origin.y + (200-self.frame.size.height)),
+ 200, 200),
+ self.frame);*/
+
 - (void)didMoveToSuperview
 {
+    dispatch_async(dispatch_get_main_queue(), ^{
     if (!CGSizeEqualToSize(self.frame.size, (CGSize){200,200})) {
-        CGAffineTransform transform = CGAffineTransformFromRectToRect(CGRectMake((self.frame.origin.x + (200-self.frame.size.width)) / 2,
-                                                                                 (self.frame.origin.y + (200-self.frame.size.height)) / 2,
-                                                                                 200, 200),
+        
+        CGPoint prevCenter = self.layer.position;
+        CGAffineTransform transform = CGAffineTransformFromRectToRect(CGRectMake(0, 0, 200, 200),
                                                                       self.frame);
+        [self.layer setFrame:CGRectMake(0, 0, 200, 200)];
         self.layer.transform = CATransform3DMakeAffineTransform(transform);
+        
+        [self setCenter:prevCenter];
     }
+    });
 }
 
 CGAffineTransform CGAffineTransformFromRectToRect(CGRect fromRect, CGRect toRect)
 {
-    /*
-     CGAffineTransform scale = CGAffineTransformMakeScale(toRect.size.width/fromRect.size.width, toRect.size.height/fromRect.size.height);
-     return scale;*/
     
-    CGAffineTransform trans1 = CGAffineTransformMakeTranslation(-fromRect.origin.x, -fromRect.origin.y);
-    CGAffineTransform scale = CGAffineTransformMakeScale(toRect.size.width/fromRect.size.width, toRect.size.height/fromRect.size.height);
-    CGAffineTransform trans2 = CGAffineTransformMakeTranslation(toRect.origin.x, toRect.origin.y);
-    return CGAffineTransformConcat(CGAffineTransformConcat(trans1, scale), trans2);
+     CGAffineTransform scale = CGAffineTransformMakeScale(toRect.size.width/fromRect.size.width, toRect.size.height/fromRect.size.height);
+     return scale;
 }
 
 - (void)sharedInit
@@ -534,8 +556,13 @@ CGAffineTransform CGAffineTransformFromRectToRect(CGRect fromRect, CGRect toRect
 
 - (void)decrement
 {
+    if (self.currentDigit == 0) {
+        self.currentDigit = 9;
+    } else {
+        self.currentDigit--;
+    }
     
-    [self animateToDigit:(self.currentDigit - 1) % 10];
+    [self animateToDigit:self.currentDigit % 10];
 }
 
 - (void)increment

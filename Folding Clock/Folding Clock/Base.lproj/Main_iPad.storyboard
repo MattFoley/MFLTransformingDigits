@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12E55" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12E55" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
@@ -8,15 +8,103 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MFLViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Cai-CG-IMr"/>
-                        <viewControllerLayoutGuide type="bottom" id="cTz-6G-k5v"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="SNU-mL-jEn" customClass="MFLFoldingDigit">
+                                <rect key="frame" x="42" y="96" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="iEM-Ik-rsl" customClass="MFLFoldingDigit">
+                                <rect key="frame" x="284" y="96" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="mMy-1b-Ruu" customClass="MFLFoldingDigit">
+                                <rect key="frame" x="528" y="96" width="200.00000000000006" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="l6p-ES-FD6" customClass="MFLFoldingDigit">
+                                <rect key="frame" x="41" y="412" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="C4r-aI-6GB" customClass="MFLFoldingDigit">
+                                <rect key="frame" x="528" y="714" width="200.00000000000006" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="U2D-3l-EYj" customClass="MFLFoldingDigit">
+                                <rect key="frame" x="527" y="412" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="y4S-TF-O9P" customClass="MFLFoldingDigit">
+                                <rect key="frame" x="41" y="714" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="KCN-YK-VzT" customClass="MFLFoldingDigit">
+                                <rect key="frame" x="283" y="714" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="p5e-ea-Az8" customClass="MFLFoldingDigit">
+                                <rect key="frame" x="284" y="412" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GDS-ee-kkw">
+                                <rect key="frame" x="42" y="47" width="250" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="19"/>
+                                <state key="normal" title="Toggle Increment/Decrement">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleDirectionOfChange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M7Q-Lx-Slp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gRF-xT-2m5">
+                                <rect key="frame" x="478" y="47" width="250" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="19"/>
+                                <state key="normal" title="Scramble">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="scrambleDigits:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IGE-FW-E11"/>
+                                    <action selector="toggleDirectionOfChange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fHC-NC-rJ2"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="padDigitTest2D" destination="SNU-mL-jEn" id="fq7-Mj-dJq"/>
+                        <outlet property="padDigitTest2DPinhole" destination="iEM-Ik-rsl" id="hBo-Ih-52N"/>
+                        <outlet property="padDigitTest3DFull" destination="mMy-1b-Ruu" id="XXG-ug-urz"/>
+                        <outlet property="padDigitTest3DFullPinhole" destination="l6p-ES-FD6" id="Znm-bx-lp6"/>
+                        <outlet property="padDigitTest3DHorz" destination="C4r-aI-6GB" id="aWi-9M-4SW"/>
+                        <outlet property="padDigitTest3DHorzPinhole" destination="U2D-3l-EYj" id="ktH-tW-mUv"/>
+                        <outlet property="padDigitTest3DVert" destination="y4S-TF-O9P" id="DjB-2A-2EU"/>
+                        <outlet property="padDigitTest3DVertPinhole" destination="KCN-YK-VzT" id="i5N-EE-uAI"/>
+                        <outlet property="padDigitTestPlain" destination="p5e-ea-Az8" id="nbi-gA-FhX"/>
+                        <outletCollection property="digitViews" destination="SNU-mL-jEn" collectionClass="NSMutableArray" id="KPS-D3-eoE"/>
+                        <outletCollection property="digitViews" destination="iEM-Ik-rsl" collectionClass="NSMutableArray" id="suY-bb-jXw"/>
+                        <outletCollection property="digitViews" destination="mMy-1b-Ruu" collectionClass="NSMutableArray" id="O8x-oq-rhi"/>
+                        <outletCollection property="digitViews" destination="l6p-ES-FD6" collectionClass="NSMutableArray" id="qrX-zg-Zat"/>
+                        <outletCollection property="digitViews" destination="C4r-aI-6GB" collectionClass="NSMutableArray" id="Nav-oU-XXi"/>
+                        <outletCollection property="digitViews" destination="U2D-3l-EYj" collectionClass="NSMutableArray" id="WdK-3Q-rmN"/>
+                        <outletCollection property="digitViews" destination="y4S-TF-O9P" collectionClass="NSMutableArray" id="pHZ-u5-eIe"/>
+                        <outletCollection property="digitViews" destination="KCN-YK-VzT" collectionClass="NSMutableArray" id="Qua-SR-xfD"/>
+                        <outletCollection property="digitViews" destination="p5e-ea-Az8" collectionClass="NSMutableArray" id="prT-MZ-IQL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
