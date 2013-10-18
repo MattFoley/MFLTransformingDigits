@@ -163,8 +163,33 @@ static CGPoint controlTwo[10][4] =
     return self;
 }
 
+- (void)didMoveToSuperview
+{
+    if (!CGSizeEqualToSize(self.frame.size, (CGSize){200,200})) {
+        CGAffineTransform transform = CGAffineTransformFromRectToRect(CGRectMake((self.frame.origin.x + (200-self.frame.size.width)) / 2,
+                                                                                 (self.frame.origin.y + (200-self.frame.size.height)) / 2,
+                                                                                 200, 200),
+                                                                      self.frame);
+        self.layer.transform = CATransform3DMakeAffineTransform(transform);
+    }
+}
+
+CGAffineTransform CGAffineTransformFromRectToRect(CGRect fromRect, CGRect toRect)
+{
+    /*
+     CGAffineTransform scale = CGAffineTransformMakeScale(toRect.size.width/fromRect.size.width, toRect.size.height/fromRect.size.height);
+     return scale;*/
+    
+    CGAffineTransform trans1 = CGAffineTransformMakeTranslation(-fromRect.origin.x, -fromRect.origin.y);
+    CGAffineTransform scale = CGAffineTransformMakeScale(toRect.size.width/fromRect.size.width, toRect.size.height/fromRect.size.height);
+    CGAffineTransform trans2 = CGAffineTransformMakeTranslation(toRect.origin.x, toRect.origin.y);
+    return CGAffineTransformConcat(CGAffineTransformConcat(trans1, scale), trans2);
+}
+
 - (void)sharedInit
 {
+    self.backgroundColor = [UIColor clearColor];
+    
     _calculationMode = kCAAnimationCubic;
     _timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     
@@ -184,8 +209,7 @@ static CGPoint controlTwo[10][4] =
 {
     self.drawnDigit = [[CAShapeLayer alloc] init];
     
-    [self.drawnDigit setBounds:self.bounds];
-    [self.drawnDigit setPosition:self.center];
+    [self.drawnDigit setFrame:CGRectMake(0, 0, 200, 200)];
     [self.drawnDigit setFillColor:[[UIColor clearColor] CGColor]];
     [self.drawnDigit setStrokeColor:_strokeColor];
     [self.drawnDigit setLineWidth:_lineThickness];
@@ -204,8 +228,7 @@ static CGPoint controlTwo[10][4] =
     }
     
     [_drawnSegments enumerateObjectsUsingBlock:^(CAShapeLayer *segment, NSUInteger idx, BOOL *stop) {
-        [segment setBounds:self.bounds];
-        [segment setPosition:self.center];
+        [segment setFrame:CGRectMake(0, 0, 200, 200)];
         [segment setFillColor:[[UIColor clearColor] CGColor]];
         [segment setStrokeColor:_strokeColor];
         [segment setLineWidth:_lineThickness];
@@ -362,7 +385,7 @@ static CGPoint controlTwo[10][4] =
             [animations addObject:[self pinholeScaleAnimation]];
             break;
         }
-
+            
         case kMFLNoScale:
         default:
             break;
@@ -504,7 +527,7 @@ static CGPoint controlTwo[10][4] =
                    controlPoint1:controlOne[digit][idx]
                    controlPoint2:controlTwo[digit][idx]];
     }
-
+    
     return newPath;
 }
 

@@ -21,7 +21,7 @@
 {
     [super viewDidLoad];
     
-    self.digitTest = [[MFLFoldingDigit alloc] initFlatWithFrame:CGRectMake(0, 0, 200, 200) andDigit:0];
+    self.digitTest = [[MFLFoldingDigit alloc] initFlatWithFrame:CGRectMake(0, 0, 300, 300) andDigit:0];
     
     [self.digitTest setBackgroundColor:[UIColor clearColor]];
     [self.digitTest setStrokeColor:[UIColor whiteColor].CGColor];
