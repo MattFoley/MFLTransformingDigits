@@ -29,7 +29,8 @@
     [self.view addSubview:self.digitTest];
     [self.digitTest setCenter:self.view.center];
     [self.digitTest setAnimationStyle:kMFLCubicKeyframe];
-    [self.digitTest setRotateStyle:kMFLHorizontal3D];
+    [self.digitTest setRotate3DStyle:kMFLHorizontal3D];
+    [self.digitTest setScaleStyle:kMFLPinHole];
     [self.digitTest setShouldRotateIn2D:YES];
     
     double delayInSeconds = 1.0;

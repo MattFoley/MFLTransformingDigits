@@ -21,6 +21,11 @@ typedef enum {
     kMFLNoRotate
 } MFLRotateAnimationStyle;
 
+typedef enum {
+    kMFLPinHole,
+    kMFLNoScale
+} MFLScaleAnimationStyle;
+
 @interface MFLFoldingDigit : UIView
 
 @property (nonatomic) CGColorRef strokeColor;
@@ -34,7 +39,8 @@ typedef enum {
 @property MFLAnimationStyle animationStyle;
 
 //Animation addons
-@property MFLRotateAnimationStyle rotateStyle;
+@property MFLRotateAnimationStyle rotate3DStyle;
+@property MFLScaleAnimationStyle scaleStyle;
 
 @property BOOL shouldRotateIn2D;
 

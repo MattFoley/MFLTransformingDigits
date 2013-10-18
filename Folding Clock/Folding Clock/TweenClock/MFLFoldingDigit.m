@@ -174,7 +174,8 @@ static CGPoint controlTwo[10][4] =
     
     _drawnSegments = [@[] mutableCopy];
     
-    _rotateStyle = kMFLVertical3D;
+    _rotate3DStyle = kMFLNoRotate;
+    _scaleStyle = kMFLNoScale;
     
     _shouldRotateIn2D = NO;
 }
@@ -289,6 +290,7 @@ static CGPoint controlTwo[10][4] =
     [animations addObject:[self getBasicAnimationForPath:path fromPath:fromPath]];
     
     [self add3DRotateAnimationToArray:animations];
+    [self addScaleAnimationToArray:animations];
     
     if (self.shouldRotateIn2D) {
         [animations addObject:[self rotate2DAnimation]];
@@ -329,7 +331,7 @@ static CGPoint controlTwo[10][4] =
 
 - (void)add3DRotateAnimationToArray:(NSMutableArray*)animations
 {
-    switch (self.rotateStyle) {
+    switch (self.rotate3DStyle) {
         case kMFLFull3D:
         {
             [animations addObject:[self rotate3DFullAnimation]];
@@ -351,6 +353,38 @@ static CGPoint controlTwo[10][4] =
     }
     
 }
+
+- (void)addScaleAnimationToArray:(NSMutableArray*)animations
+{
+    switch (self.scaleStyle) {
+        case kMFLPinHole:
+        {
+            [animations addObject:[self pinholeScaleAnimation]];
+            break;
+        }
+
+        case kMFLNoScale:
+        default:
+            break;
+    }
+    
+}
+
+#pragma mark Scale Animations
+
+- (CAAnimation *)pinholeScaleAnimation
+{
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+    
+    animation.duration = self.transformDuration / 2;
+    animation.fromValue = @(1);
+    animation.toValue = @(0);
+    
+    animation.autoreverses = YES;
+    return animation;
+}
+
+#pragma mark Rotate Animations
 
 - (CAKeyframeAnimation *)rotate3DHorizontalAnimation
 {
@@ -404,6 +438,8 @@ static CGPoint controlTwo[10][4] =
     animation.autoreverses = NO;
     return animation;
 }
+
+#pragma mark Path Animations
 
 - (CAKeyframeAnimation *)keyframeAnimationForPath:(UIBezierPath *)path fromPath:(CGPathRef)fromPath
 {
