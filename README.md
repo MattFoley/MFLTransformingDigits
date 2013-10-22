@@ -4,11 +4,11 @@ MFLFoldingClock
 
 ####Beginnings of a fun animation project in UIBezierPaths
 
-This is a highly complez animation library for showing numbers changing, be it a countdown, a clock, or a scoreboard. It now allows for any size frame with special affine transforms.
+This is a highly complex animation library for showing numbers changing, be it a countdown, a clock, or a scoreboard. It now allows for any size frame with special affine transforms.
 
 After creating it you can increment, decrement or set it directly to a digit.
 
-Much more is planned in the future.
+Much more is planned in the future, but for now check out a [video here.](http://www.youtube.com/watch?v=AWKp-sXtM90)
 
 ###Initialize Types
 For segment based animatons initialize with:
