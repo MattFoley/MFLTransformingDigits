@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 MFL. All rights reserved.
 //
 
-#import "MFLFoldingClock.h"
+#import "MFLTransformingClock.h"
 
-@implementation MFLFoldingClock
+@implementation MFLTransformingClock
 
 - (id)initWithFrame:(CGRect)frame
 {

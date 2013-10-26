@@ -1,0 +1,547 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3706B0E6181C207400A8A0F5 /* MFLTransformingClock.m in Sources */ = {isa = PBXBuildFile; fileRef = 3706B0D7181C207400A8A0F5 /* MFLTransformingClock.m */; };
+		3706B0E7181C207400A8A0F5 /* MFLTransformingScoreBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 3706B0D9181C207400A8A0F5 /* MFLTransformingScoreBoard.m */; };
+		3706B0EF181C209F00A8A0F5 /* MFLTransformingDigit+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3706B0EC181C209F00A8A0F5 /* MFLTransformingDigit+Animation.m */; };
+		3706B0F0181C209F00A8A0F5 /* MFLTransformingDigit.m in Sources */ = {isa = PBXBuildFile; fileRef = 3706B0EE181C209F00A8A0F5 /* MFLTransformingDigit.m */; };
+		3706B115181C2C7200A8A0F5 /* CAAnimation+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 3706B114181C2C7200A8A0F5 /* CAAnimation+Blocks.m */; };
+		371A9E26180D7F7B0023508D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371A9E25180D7F7B0023508D /* Foundation.framework */; };
+		371A9E28180D7F7B0023508D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371A9E27180D7F7B0023508D /* CoreGraphics.framework */; };
+		371A9E2A180D7F7B0023508D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371A9E29180D7F7B0023508D /* UIKit.framework */; };
+		371A9E48180D7F7B0023508D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371A9E47180D7F7B0023508D /* XCTest.framework */; };
+		371A9E49180D7F7B0023508D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371A9E25180D7F7B0023508D /* Foundation.framework */; };
+		371A9E4A180D7F7B0023508D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 371A9E29180D7F7B0023508D /* UIKit.framework */; };
+		371A9E52180D7F7B0023508D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 371A9E50180D7F7B0023508D /* InfoPlist.strings */; };
+		371A9E54180D7F7B0023508D /* NumberTweeningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 371A9E53180D7F7B0023508D /* NumberTweeningTests.m */; };
+		37A8DE31180E511C003349D1 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A8DE1C180E511C003349D1 /* Main_iPad.storyboard */; };
+		37A8DE32180E511C003349D1 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A8DE1E180E511C003349D1 /* Main_iPhone.storyboard */; };
+		37A8DE33180E511C003349D1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37A8DE20180E511C003349D1 /* InfoPlist.strings */; };
+		37A8DE35180E511C003349D1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37A8DE24180E511C003349D1 /* Images.xcassets */; };
+		37A8DE36180E511C003349D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A8DE25180E511C003349D1 /* main.m */; };
+		37A8DE37180E511C003349D1 /* MFLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A8DE27180E511C003349D1 /* MFLAppDelegate.m */; };
+		37A8DE38180E511C003349D1 /* MFLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37A8DE29180E511C003349D1 /* MFLViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		371A9E4B180D7F7B0023508D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 371A9E1A180D7F7B0023508D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 371A9E21180D7F7B0023508D;
+			remoteInfo = NumberTweening;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3706B0D6181C207400A8A0F5 /* MFLTransformingClock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFLTransformingClock.h; sourceTree = "<group>"; };
+		3706B0D7181C207400A8A0F5 /* MFLTransformingClock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFLTransformingClock.m; sourceTree = "<group>"; };
+		3706B0D8181C207400A8A0F5 /* MFLTransformingScoreBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFLTransformingScoreBoard.h; sourceTree = "<group>"; };
+		3706B0D9181C207400A8A0F5 /* MFLTransformingScoreBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFLTransformingScoreBoard.m; sourceTree = "<group>"; };
+		3706B0DC181C207400A8A0F5 /* Transforming Digits Example-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Transforming Digits Example-Info.plist"; sourceTree = "<group>"; };
+		3706B0DD181C207400A8A0F5 /* Transforming Digits Example-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Transforming Digits Example-Prefix.pch"; sourceTree = "<group>"; };
+		3706B0EB181C209F00A8A0F5 /* MFLTransformingDigit+Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MFLTransformingDigit+Animation.h"; sourceTree = "<group>"; };
+		3706B0EC181C209F00A8A0F5 /* MFLTransformingDigit+Animation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MFLTransformingDigit+Animation.m"; sourceTree = "<group>"; };
+		3706B0ED181C209F00A8A0F5 /* MFLTransformingDigit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFLTransformingDigit.h; sourceTree = "<group>"; };
+		3706B0EE181C209F00A8A0F5 /* MFLTransformingDigit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFLTransformingDigit.m; sourceTree = "<group>"; };
+		3706B113181C2C7200A8A0F5 /* CAAnimation+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+Blocks.h"; sourceTree = "<group>"; };
+		3706B114181C2C7200A8A0F5 /* CAAnimation+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+Blocks.m"; sourceTree = "<group>"; };
+		371A9E22180D7F7B0023508D /* Transforming Digits Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Transforming Digits Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		371A9E25180D7F7B0023508D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		371A9E27180D7F7B0023508D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		371A9E29180D7F7B0023508D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		371A9E46180D7F7B0023508D /* Transforming Digits ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Transforming Digits ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		371A9E47180D7F7B0023508D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		371A9E4F180D7F7B0023508D /* Transforming Digits ExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Transforming Digits ExampleTests-Info.plist"; sourceTree = "<group>"; };
+		371A9E51180D7F7B0023508D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		371A9E53180D7F7B0023508D /* NumberTweeningTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NumberTweeningTests.m; sourceTree = "<group>"; };
+		37A8DE1D180E511C003349D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		37A8DE1F180E511C003349D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		37A8DE21180E511C003349D1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		37A8DE24180E511C003349D1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		37A8DE25180E511C003349D1 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		37A8DE26180E511C003349D1 /* MFLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFLAppDelegate.h; sourceTree = "<group>"; };
+		37A8DE27180E511C003349D1 /* MFLAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFLAppDelegate.m; sourceTree = "<group>"; };
+		37A8DE28180E511C003349D1 /* MFLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFLViewController.h; sourceTree = "<group>"; };
+		37A8DE29180E511C003349D1 /* MFLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFLViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		371A9E1F180D7F7B0023508D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				371A9E28180D7F7B0023508D /* CoreGraphics.framework in Frameworks */,
+				371A9E2A180D7F7B0023508D /* UIKit.framework in Frameworks */,
+				371A9E26180D7F7B0023508D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		371A9E43180D7F7B0023508D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				371A9E48180D7F7B0023508D /* XCTest.framework in Frameworks */,
+				371A9E4A180D7F7B0023508D /* UIKit.framework in Frameworks */,
+				371A9E49180D7F7B0023508D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3706B0D0181C207400A8A0F5 /* MFLTransformingDigits */ = {
+			isa = PBXGroup;
+			children = (
+				3706B112181C2C7200A8A0F5 /* CAAnimationBlocks */,
+				3706B0EA181C209F00A8A0F5 /* Transforming Digit */,
+				3706B0D6181C207400A8A0F5 /* MFLTransformingClock.h */,
+				3706B0D7181C207400A8A0F5 /* MFLTransformingClock.m */,
+				3706B0D8181C207400A8A0F5 /* MFLTransformingScoreBoard.h */,
+				3706B0D9181C207400A8A0F5 /* MFLTransformingScoreBoard.m */,
+			);
+			path = MFLTransformingDigits;
+			sourceTree = "<group>";
+		};
+		3706B0EA181C209F00A8A0F5 /* Transforming Digit */ = {
+			isa = PBXGroup;
+			children = (
+				3706B0EB181C209F00A8A0F5 /* MFLTransformingDigit+Animation.h */,
+				3706B0EC181C209F00A8A0F5 /* MFLTransformingDigit+Animation.m */,
+				3706B0ED181C209F00A8A0F5 /* MFLTransformingDigit.h */,
+				3706B0EE181C209F00A8A0F5 /* MFLTransformingDigit.m */,
+			);
+			path = "Transforming Digit";
+			sourceTree = "<group>";
+		};
+		3706B0F1181C22EB00A8A0F5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3706B0DC181C207400A8A0F5 /* Transforming Digits Example-Info.plist */,
+				3706B0DD181C207400A8A0F5 /* Transforming Digits Example-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3706B112181C2C7200A8A0F5 /* CAAnimationBlocks */ = {
+			isa = PBXGroup;
+			children = (
+				3706B113181C2C7200A8A0F5 /* CAAnimation+Blocks.h */,
+				3706B114181C2C7200A8A0F5 /* CAAnimation+Blocks.m */,
+			);
+			name = CAAnimationBlocks;
+			path = "CAAnimation+Blocks/CAAnimationBlocks";
+			sourceTree = "<group>";
+		};
+		371A9E19180D7F7B0023508D = {
+			isa = PBXGroup;
+			children = (
+				37A8DE1B180E511C003349D1 /* Transforming Digits */,
+				371A9E4D180D7F7B0023508D /* NumberTweeningTests */,
+				371A9E24180D7F7B0023508D /* Frameworks */,
+				371A9E23180D7F7B0023508D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		371A9E23180D7F7B0023508D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				371A9E22180D7F7B0023508D /* Transforming Digits Example.app */,
+				371A9E46180D7F7B0023508D /* Transforming Digits ExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		371A9E24180D7F7B0023508D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				371A9E25180D7F7B0023508D /* Foundation.framework */,
+				371A9E27180D7F7B0023508D /* CoreGraphics.framework */,
+				371A9E29180D7F7B0023508D /* UIKit.framework */,
+				371A9E47180D7F7B0023508D /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		371A9E4D180D7F7B0023508D /* NumberTweeningTests */ = {
+			isa = PBXGroup;
+			children = (
+				371A9E53180D7F7B0023508D /* NumberTweeningTests.m */,
+				371A9E4E180D7F7B0023508D /* Supporting Files */,
+			);
+			path = NumberTweeningTests;
+			sourceTree = "<group>";
+		};
+		371A9E4E180D7F7B0023508D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				371A9E4F180D7F7B0023508D /* Transforming Digits ExampleTests-Info.plist */,
+				371A9E50180D7F7B0023508D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		37A8DE1B180E511C003349D1 /* Transforming Digits */ = {
+			isa = PBXGroup;
+			children = (
+				37A8DE1C180E511C003349D1 /* Main_iPad.storyboard */,
+				37A8DE1E180E511C003349D1 /* Main_iPhone.storyboard */,
+				37A8DE20180E511C003349D1 /* InfoPlist.strings */,
+				37A8DE24180E511C003349D1 /* Images.xcassets */,
+				37A8DE25180E511C003349D1 /* main.m */,
+				37A8DE26180E511C003349D1 /* MFLAppDelegate.h */,
+				37A8DE27180E511C003349D1 /* MFLAppDelegate.m */,
+				37A8DE28180E511C003349D1 /* MFLViewController.h */,
+				37A8DE29180E511C003349D1 /* MFLViewController.m */,
+				3706B0D0181C207400A8A0F5 /* MFLTransformingDigits */,
+				3706B0F1181C22EB00A8A0F5 /* Supporting Files */,
+			);
+			path = "Transforming Digits";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		371A9E21180D7F7B0023508D /* Transforming Digits Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 371A9E57180D7F7B0023508D /* Build configuration list for PBXNativeTarget "Transforming Digits Example" */;
+			buildPhases = (
+				371A9E1E180D7F7B0023508D /* Sources */,
+				371A9E1F180D7F7B0023508D /* Frameworks */,
+				371A9E20180D7F7B0023508D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Transforming Digits Example";
+			productName = NumberTweening;
+			productReference = 371A9E22180D7F7B0023508D /* Transforming Digits Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+		371A9E45180D7F7B0023508D /* Transforming Digits ExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 371A9E5A180D7F7B0023508D /* Build configuration list for PBXNativeTarget "Transforming Digits ExampleTests" */;
+			buildPhases = (
+				371A9E42180D7F7B0023508D /* Sources */,
+				371A9E43180D7F7B0023508D /* Frameworks */,
+				371A9E44180D7F7B0023508D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				371A9E4C180D7F7B0023508D /* PBXTargetDependency */,
+			);
+			name = "Transforming Digits ExampleTests";
+			productName = NumberTweeningTests;
+			productReference = 371A9E46180D7F7B0023508D /* Transforming Digits ExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		371A9E1A180D7F7B0023508D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MFL;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = MFL;
+				TargetAttributes = {
+					371A9E45180D7F7B0023508D = {
+						TestTargetID = 371A9E21180D7F7B0023508D;
+					};
+				};
+			};
+			buildConfigurationList = 371A9E1D180D7F7B0023508D /* Build configuration list for PBXProject "Transforming Digits Example" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 371A9E19180D7F7B0023508D;
+			productRefGroup = 371A9E23180D7F7B0023508D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				371A9E21180D7F7B0023508D /* Transforming Digits Example */,
+				371A9E45180D7F7B0023508D /* Transforming Digits ExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		371A9E20180D7F7B0023508D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37A8DE32180E511C003349D1 /* Main_iPhone.storyboard in Resources */,
+				37A8DE35180E511C003349D1 /* Images.xcassets in Resources */,
+				37A8DE33180E511C003349D1 /* InfoPlist.strings in Resources */,
+				37A8DE31180E511C003349D1 /* Main_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		371A9E44180D7F7B0023508D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				371A9E52180D7F7B0023508D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		371A9E1E180D7F7B0023508D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37A8DE38180E511C003349D1 /* MFLViewController.m in Sources */,
+				3706B0E6181C207400A8A0F5 /* MFLTransformingClock.m in Sources */,
+				3706B0EF181C209F00A8A0F5 /* MFLTransformingDigit+Animation.m in Sources */,
+				37A8DE37180E511C003349D1 /* MFLAppDelegate.m in Sources */,
+				3706B115181C2C7200A8A0F5 /* CAAnimation+Blocks.m in Sources */,
+				3706B0E7181C207400A8A0F5 /* MFLTransformingScoreBoard.m in Sources */,
+				37A8DE36180E511C003349D1 /* main.m in Sources */,
+				3706B0F0181C209F00A8A0F5 /* MFLTransformingDigit.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		371A9E42180D7F7B0023508D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				371A9E54180D7F7B0023508D /* NumberTweeningTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		371A9E4C180D7F7B0023508D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 371A9E21180D7F7B0023508D /* Transforming Digits Example */;
+			targetProxy = 371A9E4B180D7F7B0023508D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		371A9E50180D7F7B0023508D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				371A9E51180D7F7B0023508D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		37A8DE1C180E511C003349D1 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37A8DE1D180E511C003349D1 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		37A8DE1E180E511C003349D1 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37A8DE1F180E511C003349D1 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		37A8DE20180E511C003349D1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37A8DE21180E511C003349D1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		371A9E55180D7F7B0023508D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		371A9E56180D7F7B0023508D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		371A9E58180D7F7B0023508D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Transforming Digits/Transforming Digits Example-Prefix.pch";
+				INFOPLIST_FILE = "Transforming Digits/Transforming Digits Example-Info.plist";
+				PRODUCT_NAME = "Transforming Digits Example";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		371A9E59180D7F7B0023508D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Transforming Digits/Transforming Digits Example-Prefix.pch";
+				INFOPLIST_FILE = "Transforming Digits/Transforming Digits Example-Info.plist";
+				PRODUCT_NAME = "Transforming Digits Example";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		371A9E5B180D7F7B0023508D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NumberTweening.app/NumberTweening";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NumberTweening/NumberTweening-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "NumberTweeningTests/Transforming Digits ExampleTests-Info.plist";
+				PRODUCT_NAME = "Transforming Digits ExampleTests";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		371A9E5C180D7F7B0023508D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NumberTweening.app/NumberTweening";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NumberTweening/NumberTweening-Prefix.pch";
+				INFOPLIST_FILE = "NumberTweeningTests/Transforming Digits ExampleTests-Info.plist";
+				PRODUCT_NAME = "Transforming Digits ExampleTests";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		371A9E1D180D7F7B0023508D /* Build configuration list for PBXProject "Transforming Digits Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				371A9E55180D7F7B0023508D /* Debug */,
+				371A9E56180D7F7B0023508D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		371A9E57180D7F7B0023508D /* Build configuration list for PBXNativeTarget "Transforming Digits Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				371A9E58180D7F7B0023508D /* Debug */,
+				371A9E59180D7F7B0023508D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		371A9E5A180D7F7B0023508D /* Build configuration list for PBXNativeTarget "Transforming Digits ExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				371A9E5B180D7F7B0023508D /* Debug */,
+				371A9E5C180D7F7B0023508D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 371A9E1A180D7F7B0023508D /* Project object */;
+}

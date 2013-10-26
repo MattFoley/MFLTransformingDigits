@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MFLFoldingClock : UIView
+/**
+ *  Not yet implemented.
+ */
+@interface MFLTransformingClock : UIView
 
 @end
