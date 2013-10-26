@@ -8,6 +8,7 @@
 
 #import "MFLViewController.h"
 #import "MFLTransformingDigit.h"
+#import "MFLTransformingScoreBoard.h"
 
 @interface MFLViewController ()
 
@@ -27,6 +28,8 @@
 
 @property (weak) IBOutlet MFLTransformingDigit *digitTestRestroke;
 
+@property (weak) IBOutlet MFLTransformingScoreBoard *scoreBoard;
+
 @property IBOutletCollection(MFLTransformingDigit) NSMutableArray *digitViews;
 
 @property BOOL shouldIncrement;
@@ -45,7 +48,7 @@
     double delayInSeconds = 1.0;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        [self rotateDigits];
+        //[self rotateDigits];
     });
 }
 
@@ -89,9 +92,13 @@
     if ( [self.digitViews[0] superview] ) {
         [self.digitViews enumerateObjectsUsingBlock:^(MFLTransformingDigit *digit, NSUInteger idx, BOOL *stop) {
             if (self.shouldIncrement) {
-                [digit increment];
+                [digit incrementWithCompletion:^(BOOL success) {
+                    NSLog(@"Increment to %li completed", (long)digit.currentDigit);
+                }];
             } else {
-                [digit decrement];
+                [digit decrementWithCompletion:^(BOOL success) {
+                    NSLog(@"Decrement to %li completed", (long)digit.currentDigit);
+                }];
             }
             
         }];
@@ -127,10 +134,34 @@
 
 - (IBAction)scrambleDigits:(id)sender
 {
+
     [self.digitViews enumerateObjectsUsingBlock:^(MFLTransformingDigit *digit, NSUInteger idx, BOOL *stop) {
-        [digit animateToDigit:arc4random()%10];
+        NSInteger newNumber = arc4random()%10;
+
+        [digit animateToDigit:newNumber completion:^(BOOL success) {
+            NSLog(@"Scramble to %li completed", (long)digit.currentDigit);
+        }];
     }];
 }
+
+- (IBAction)increaseScoreByRandom:(id)sender
+{
+    NSInteger randomIncrease = arc4random() % 5000 + 500;
+    [self.scoreBoard incrementByValue:randomIncrease completion:^(BOOL success) {
+                NSLog(@"Increase Finished");
+    }];
+    
+}
+
+- (IBAction)decreaseScoreByRandom:(id)sender
+{
+    NSInteger randomDecrease = arc4random() % 5000 + 500;
+    [self.scoreBoard decrementByValue:randomDecrease completion:^(BOOL success) {
+        NSLog(@"Decrease Finished");
+    }];
+    
+}
+
 
 - (void)didReceiveMemoryWarning
 {

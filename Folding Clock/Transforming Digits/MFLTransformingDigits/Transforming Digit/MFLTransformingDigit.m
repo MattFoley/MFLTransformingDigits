@@ -188,7 +188,7 @@ static CGPoint controlTwo[10][4] =
     } else {
         self = [self initWithFrame:digit.frame andDigit:digit.currentDigit];
     }
-    
+
     self.strokeColor = digit.strokeColor;
     self.lineThickness = digit.lineThickness;
     self.animationDuration = digit.animationDuration;
@@ -341,56 +341,6 @@ CGAffineTransform CGAffineTransformFromRectToRect(CGRect fromRect, CGRect toRect
     }
     
     return newPath;
-}
-
-- (void)animateToDigit:(NSInteger)digit
-{
-    [self animateToDigit:digit completion:nil];
-}
-
-- (void)animateToDigit:(NSInteger)digit completion:(void (^)(BOOL))completion
-{
-    switch (self.foldingStyle) {
-        case kMFLSegmentFold:
-        {
-            [self animateSegmentsToDigit:digit completion:completion];
-            break;
-        }
-        case kMFLSingleLineFold:
-        {
-            [self animateToDigitFlat:digit completion:completion];
-            break;
-        }
-        default:
-            break;
-    }
-}
-
-
-- (void)decrement
-{
-    [self decrementWithCompletion:nil];
-}
-
-- (void)decrementWithCompletion:(void (^)(BOOL))completion
-{
-    if (self.currentDigit == 0) {
-        self.currentDigit = 9;
-    } else {
-        self.currentDigit--;
-    }
-    
-    [self animateToDigit:self.currentDigit % 10 completion:completion];
-}
-
-- (void)increment
-{
-    [self incrementWithCompletion:nil];
-}
-
-- (void)incrementWithCompletion:(void (^)(BOOL))completion
-{
-    [self animateToDigit:(self.currentDigit + 1) % 10 completion:completion];
 }
 
 - (void)removeFromSuperview:(BOOL)animated

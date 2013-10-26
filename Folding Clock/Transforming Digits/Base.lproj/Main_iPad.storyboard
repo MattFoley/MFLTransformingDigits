@@ -28,37 +28,42 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" id="l6p-ES-FD6" customClass="MFLTransformingDigit">
-                                <rect key="frame" x="71" y="361" width="140" height="140"/>
+                                <rect key="frame" x="62" y="305" width="140" height="140"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" id="C4r-aI-6GB" customClass="MFLTransformingDigit">
-                                <rect key="frame" x="558" y="606.00000479349069" width="140" height="140"/>
+                                <rect key="frame" x="418.99998869938452" y="484.00000272478354" width="140" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" id="U2D-3l-EYj" customClass="MFLTransformingDigit">
-                                <rect key="frame" x="557" y="361" width="140" height="140"/>
+                                <rect key="frame" x="599" y="484" width="140" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" id="y4S-TF-O9P" customClass="MFLTransformingDigit">
-                                <rect key="frame" x="71" y="606.00000479349069" width="140" height="140"/>
+                                <rect key="frame" x="27" y="484.00000272478366" width="140" height="140"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" id="KCN-YK-VzT" customClass="MFLTransformingDigit">
-                                <rect key="frame" x="313" y="606.00000479349069" width="140" height="140"/>
+                                <rect key="frame" x="223" y="484.0000027247836" width="140" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" id="Bb4-om-T0O" customClass="MFLTransformingDigit">
-                                <rect key="frame" x="314" y="772" width="140" height="140"/>
+                                <rect key="frame" x="558" y="297" width="140" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" id="p5e-ea-Az8" customClass="MFLTransformingDigit">
-                                <rect key="frame" x="314" y="361" width="140" height="140"/>
+                                <rect key="frame" x="320" y="297" width="140" height="140"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="UZt-1J-Wi3" customClass="MFLTransformingScoreBoard">
+                                <rect key="frame" x="120" y="805" width="600" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
@@ -99,20 +104,53 @@
                                     <action selector="toggleRemoveAndAdd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1g7-5d-V0W"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5Qe-Os-we4">
+                                <rect key="frame" x="141" y="755" width="142" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="19"/>
+                                <state key="normal" title="Add Random">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="increaseScoreByRandom:" destination="BYZ-38-t0r" eventType="touchUpInside" id="10M-Pa-Zf9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="n6X-85-EJL">
+                                <rect key="frame" x="262" y="684" width="142" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="19"/>
+                                <state key="normal" title="ScoreBoard">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gPg-p6-3QF">
+                                <rect key="frame" x="382" y="755" width="142" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="19"/>
+                                <state key="normal" title="Subtract Random">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="decreaseScoreByRandom:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZX7-6X-a2r"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="digitTest2D" destination="SNU-mL-jEn" id="YVX-lw-opk"/>
+                        <outlet property="digitTest2DPinhole" destination="iEM-Ik-rsl" id="4nI-aS-aMh"/>
+                        <outlet property="digitTest3DFull" destination="mMy-1b-Ruu" id="DPd-7h-Al7"/>
+                        <outlet property="digitTest3DFullPinhole" destination="l6p-ES-FD6" id="m6d-O3-zuH"/>
+                        <outlet property="digitTest3DHorz" destination="p5e-ea-Az8" id="fxu-nb-MCa"/>
+                        <outlet property="digitTest3DHorzPinhole" destination="Bb4-om-T0O" id="tOT-iT-UCL"/>
+                        <outlet property="digitTest3DVert" destination="y4S-TF-O9P" id="klU-wi-IZN"/>
+                        <outlet property="digitTest3DVertPinhole" destination="KCN-YK-VzT" id="Rf8-vH-CFv"/>
+                        <outlet property="digitTestPlain" destination="C4r-aI-6GB" id="Iq5-sU-MpR"/>
                         <outlet property="digitTestRestroke" destination="Bb4-om-T0O" id="6iN-jX-Eye"/>
-                        <outlet property="padDigitTest2D" destination="SNU-mL-jEn" id="fq7-Mj-dJq"/>
-                        <outlet property="padDigitTest2DPinhole" destination="iEM-Ik-rsl" id="hBo-Ih-52N"/>
-                        <outlet property="padDigitTest3DFull" destination="mMy-1b-Ruu" id="XXG-ug-urz"/>
-                        <outlet property="padDigitTest3DFullPinhole" destination="l6p-ES-FD6" id="Znm-bx-lp6"/>
-                        <outlet property="padDigitTest3DHorz" destination="C4r-aI-6GB" id="aWi-9M-4SW"/>
-                        <outlet property="padDigitTest3DHorzPinhole" destination="U2D-3l-EYj" id="ktH-tW-mUv"/>
-                        <outlet property="padDigitTest3DVert" destination="y4S-TF-O9P" id="DjB-2A-2EU"/>
-                        <outlet property="padDigitTest3DVertPinhole" destination="KCN-YK-VzT" id="i5N-EE-uAI"/>
-                        <outlet property="padDigitTestPlain" destination="p5e-ea-Az8" id="nbi-gA-FhX"/>
+                        <outlet property="scoreBoard" destination="UZt-1J-Wi3" id="hCg-ab-qjG"/>
                         <outletCollection property="digitViews" destination="SNU-mL-jEn" collectionClass="NSMutableArray" id="KPS-D3-eoE"/>
                         <outletCollection property="digitViews" destination="iEM-Ik-rsl" collectionClass="NSMutableArray" id="suY-bb-jXw"/>
                         <outletCollection property="digitViews" destination="mMy-1b-Ruu" collectionClass="NSMutableArray" id="O8x-oq-rhi"/>

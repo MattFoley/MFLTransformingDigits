@@ -25,7 +25,7 @@
  *  @param completion Allows you to execute code on the completion of the animation
  *
  */
-- (void)animateToDigit:(NSInteger)digit completion:(void (^)(BOOL))completion;
+- (void)animateToDigit:(NSInteger)digit completion:(void (^)(BOOL success))completion;
 
 /**
  *  Will decrement by one number, @Note: 0 will decrement to 9.
@@ -37,7 +37,7 @@
  *
  *  @param completion Allows you to execute code on the completion of the animation
  */
-- (void)decrementWithCompletion:(void (^)(BOOL))completion;
+- (void)decrementWithCompletion:(void (^)(BOOL success))completion;
 
 /**
  *  Will increment by one number, @Note 9 will increment to 0.
@@ -49,14 +49,14 @@
  *
  *  @param completion Allows you to execute code on the completion of the animation
  */
-- (void)incrementWithCompletion:(void (^)(BOOL))completion;
+- (void)incrementWithCompletion:(void (^)(BOOL success))completion;
 
 
 
 #pragma mark Ignore Me!
 
-- (void)animateSegmentsToDigit:(NSInteger)digit completion:(void (^)(BOOL))completion;;
-- (void)animateToDigitFlat:(NSInteger)digit completion:(void (^)(BOOL))completion;;
+- (void)animateSegmentsToDigit:(NSInteger)digit completion:(void (^)(BOOL success))completion;;
+- (void)animateToDigitFlat:(NSInteger)digit completion:(void (^)(BOOL success))completion;;
 
 - (void)animateOnScreen;
 

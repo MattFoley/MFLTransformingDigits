@@ -40,7 +40,7 @@
 
 @implementation CAAnimation (BlocksAddition)
 
-- (void)setCompletion:(void (^)(BOOL))completion
+- (void)setCompletion:(void (^)(BOOL success))completion
 {
     if ([self.delegate isKindOfClass:[CAAnimationDelegate class]]) {
         ((CAAnimationDelegate *)self.delegate).completion = completion;
@@ -52,7 +52,7 @@
     }
 }
 
-- (void (^)(BOOL))completion
+- (void (^)(BOOL success))completion
 {
     return [self.delegate isKindOfClass:[CAAnimationDelegate class]]? ((CAAnimationDelegate *)self.delegate).completion: nil;
 }

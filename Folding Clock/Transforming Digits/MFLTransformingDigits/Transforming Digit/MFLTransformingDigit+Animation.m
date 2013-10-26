@@ -38,7 +38,7 @@
     }
 }
 
-- (void)animateSegmentsToDigit:(NSInteger)digit completion:(void (^)(BOOL))completion;
+- (void)animateSegmentsToDigit:(NSInteger)digit completion:(void (^)(BOOL success))completion;
 {
     self.currentDigit = digit;
     
@@ -48,7 +48,7 @@
     }];
 }
 
-- (void)animateToDigitFlat:(NSInteger)digit completion:(void (^)(BOOL))completion;
+- (void)animateToDigitFlat:(NSInteger)digit completion:(void (^)(BOOL success))completion;
 {
     self.currentDigit = digit;
     UIBezierPath *newPath = [self linePathForDigit:digit];
@@ -56,7 +56,7 @@
     [self attachAnimationForPath:newPath toLayer:self.drawnDigit completion:completion];
 }
 
-- (void)attachAnimationForPath:(UIBezierPath *)path toLayer:(CAShapeLayer *)layer completion:(void (^)(BOOL))completion;
+- (void)attachAnimationForPath:(UIBezierPath *)path toLayer:(CAShapeLayer *)layer completion:(void (^)(BOOL success))completion;
 {
     CAAnimationGroup *pathAnim = (CAAnimationGroup *)[self animationForPath:path fromPath:layer.path];
     [pathAnim setCompletion:completion];
@@ -282,6 +282,56 @@
     [group setAnimations:@[pathAnim, animateStrokeEnd]];
     
     return group;
+}
+
+- (void)animateToDigit:(NSInteger)digit
+{
+    [self animateToDigit:digit completion:nil];
+}
+
+- (void)animateToDigit:(NSInteger)digit completion:(void (^)(BOOL success))completion
+{
+    switch (self.foldingStyle) {
+        case kMFLSegmentFold:
+        {
+            [self animateSegmentsToDigit:digit completion:completion];
+            break;
+        }
+        case kMFLSingleLineFold:
+        {
+            [self animateToDigitFlat:digit completion:completion];
+            break;
+        }
+        default:
+            break;
+    }
+}
+
+
+- (void)decrement
+{
+    [self decrementWithCompletion:nil];
+}
+
+- (void)decrementWithCompletion:(void (^)(BOOL success))completion
+{
+    if (self.currentDigit == 0) {
+        self.currentDigit = 9;
+    } else {
+        self.currentDigit--;
+    }
+    
+    [self animateToDigit:self.currentDigit % 10 completion:completion];
+}
+
+- (void)increment
+{
+    [self incrementWithCompletion:nil];
+}
+
+- (void)incrementWithCompletion:(void (^)(BOOL success))completion
+{
+    [self animateToDigit:(self.currentDigit + 1) % 10 completion:completion];
 }
 
 
