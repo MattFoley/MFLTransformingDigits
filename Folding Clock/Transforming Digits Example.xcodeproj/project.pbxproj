@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		3767B5BD181C3E7200FDA695 /* Documentation */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 3767B5BE181C3E7200FDA695 /* Build configuration list for PBXAggregateTarget "Documentation" */;
+			buildPhases = (
+				3767B5C1181C3E8D00FDA695 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Documentation;
+			productName = Documentation;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		3706B0E6181C207400A8A0F5 /* MFLTransformingClock.m in Sources */ = {isa = PBXBuildFile; fileRef = 3706B0D7181C207400A8A0F5 /* MFLTransformingClock.m */; };
 		3706B0E7181C207400A8A0F5 /* MFLTransformingScoreBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 3706B0D9181C207400A8A0F5 /* MFLTransformingScoreBoard.m */; };
@@ -273,6 +287,7 @@
 			targets = (
 				371A9E21180D7F7B0023508D /* Transforming Digits Example */,
 				371A9E45180D7F7B0023508D /* Transforming Digits ExampleTests */,
+				3767B5BD181C3E7200FDA695 /* Documentation */,
 			);
 		};
 /* End PBXProject section */
@@ -298,6 +313,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3767B5C1181C3E8D00FDA695 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#appledoc Xcode script\n# Start constants\ncompany=\"MFL\";\ncompanyID=\"com.mfl\";\ncompanyURL=\"https://itunes.apple.com/us/artist/foley-productions/id478746786\";\ntarget=\"iphoneos\";\n#target=\"macosx\";\noutputPath=\"~/help\";\n# End constants\n/usr/bin/appledoc \\\n--project-name \"${PROJECT_NAME}\" \\\n--project-company \"${company}\" \\\n--company-id \"${companyID}\" \\\n--docset-atom-filename \"${company}.atom\" \\\n--docset-feed-url \"${companyURL}/${company}/%DOCSETATOMFILENAME\" \\\n--docset-package-url \"${companyURL}/${company}/%DOCSETPACKAGEFILENAME\" \\\n--docset-fallback-url \"${companyURL}/${company}\" \\\n--output \"${outputPath}\" \\\n--publish-docset \\\n--docset-platform-family \"${target}\" \\\n--logformat xcode \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--exit-threshold 2 \\\n\"${PROJECT_DIR}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		371A9E1E180D7F7B0023508D /* Sources */ = {
@@ -473,7 +504,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NumberTweening.app/NumberTweening";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Transforming Digits Example.app/Transforming Digits Example";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -496,7 +527,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NumberTweening.app/NumberTweening";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Transforming Digits Example.app/Transforming Digits Example";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -508,6 +539,20 @@
 				PRODUCT_NAME = "Transforming Digits ExampleTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		3767B5BF181C3E7200FDA695 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3767B5C0181C3E7200FDA695 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -537,6 +582,15 @@
 			buildConfigurations = (
 				371A9E5B180D7F7B0023508D /* Debug */,
 				371A9E5C180D7F7B0023508D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3767B5BE181C3E7200FDA695 /* Build configuration list for PBXAggregateTarget "Documentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3767B5BF181C3E7200FDA695 /* Debug */,
+				3767B5C0181C3E7200FDA695 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

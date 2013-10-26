@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/MFLScaleAnimationStyle.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/MFLScaleAnimationStyle</TokenIdentifier>
+			<Abstract type="html">Values to define scaling animation for digit transform</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>
+			
+			<NodeRef refid="6"/>
+		</Token>
+		
+		
+	</File>
+</Tokens>

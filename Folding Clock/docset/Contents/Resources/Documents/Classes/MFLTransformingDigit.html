@@ -1,0 +1,1583 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>MFLTransformingDigit Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.2 (build 961)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">Transforming Digits Example </a></h1>
+				<a id="developerHome" href="../index.html">FoleyProductions</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">MFLTransformingDigit Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/animationDuration">&nbsp;&nbsp;&nbsp;&nbsp;animationDuration</option>
+	
+	<option value="//api/name/animationStyle">&nbsp;&nbsp;&nbsp;&nbsp;animationStyle</option>
+	
+	<option value="//api/name/calculationMode">&nbsp;&nbsp;&nbsp;&nbsp;calculationMode</option>
+	
+	<option value="//api/name/currentDigit">&nbsp;&nbsp;&nbsp;&nbsp;currentDigit</option>
+	
+	<option value="//api/name/drawnDigit">&nbsp;&nbsp;&nbsp;&nbsp;drawnDigit</option>
+	
+	<option value="//api/name/drawnSegments">&nbsp;&nbsp;&nbsp;&nbsp;drawnSegments</option>
+	
+	<option value="//api/name/foldingStyle">&nbsp;&nbsp;&nbsp;&nbsp;foldingStyle</option>
+	
+	<option value="//api/name/lineThickness">&nbsp;&nbsp;&nbsp;&nbsp;lineThickness</option>
+	
+	<option value="//api/name/rotate3DStyle">&nbsp;&nbsp;&nbsp;&nbsp;rotate3DStyle</option>
+	
+	<option value="//api/name/scaleStyle">&nbsp;&nbsp;&nbsp;&nbsp;scaleStyle</option>
+	
+	<option value="//api/name/shouldAnimationNewSuperview">&nbsp;&nbsp;&nbsp;&nbsp;shouldAnimationNewSuperview</option>
+	
+	<option value="//api/name/shouldRotateIn2D">&nbsp;&nbsp;&nbsp;&nbsp;shouldRotateIn2D</option>
+	
+	<option value="//api/name/strokeColor">&nbsp;&nbsp;&nbsp;&nbsp;strokeColor</option>
+	
+	<option value="//api/name/timingFunction">&nbsp;&nbsp;&nbsp;&nbsp;timingFunction</option>
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/animateToDigit:">&nbsp;&nbsp;&nbsp;&nbsp;- animateToDigit:</option>
+	
+	<option value="//api/name/animateToDigit:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- animateToDigit:completion:</option>
+	
+	<option value="//api/name/decrement">&nbsp;&nbsp;&nbsp;&nbsp;- decrement</option>
+	
+	<option value="//api/name/decrementWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- decrementWithCompletion:</option>
+	
+	<option value="//api/name/increment">&nbsp;&nbsp;&nbsp;&nbsp;- increment</option>
+	
+	<option value="//api/name/incrementWithCompletion:">&nbsp;&nbsp;&nbsp;&nbsp;- incrementWithCompletion:</option>
+	
+	<option value="//api/name/initWithFoldingDigit:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithFoldingDigit:</option>
+	
+	<option value="//api/name/initWithFrame:initialDigit:foldingStyle:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithFrame:initialDigit:foldingStyle:</option>
+	
+	<option value="//api/name/linePathForDigit:">&nbsp;&nbsp;&nbsp;&nbsp;- linePathForDigit:</option>
+	
+	<option value="//api/name/removeFromSuperview:">&nbsp;&nbsp;&nbsp;&nbsp;- removeFromSuperview:</option>
+	
+	<option value="//api/name/segmentPathForDigit:atIndex:">&nbsp;&nbsp;&nbsp;&nbsp;- segmentPathForDigit:atIndex:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/animationDuration">animationDuration</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/animationStyle">animationStyle</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/calculationMode">calculationMode</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/currentDigit">currentDigit</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/drawnDigit">drawnDigit</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/drawnSegments">drawnSegments</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/foldingStyle">foldingStyle</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/lineThickness">lineThickness</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/rotate3DStyle">rotate3DStyle</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/scaleStyle">scaleStyle</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shouldAnimationNewSuperview">shouldAnimationNewSuperview</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/shouldRotateIn2D">shouldRotateIn2D</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/strokeColor">strokeColor</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/timingFunction">timingFunction</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/animateToDigit:">animateToDigit:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/animateToDigit:completion:">animateToDigit:completion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/decrement">decrement</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/decrementWithCompletion:">decrementWithCompletion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/increment">increment</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/incrementWithCompletion:">incrementWithCompletion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithFoldingDigit:">initWithFoldingDigit:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithFrame:initialDigit:foldingStyle:">initWithFrame:initialDigit:foldingStyle:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/linePathForDigit:">linePathForDigit:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeFromSuperview:">removeFromSuperview:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/segmentPathForDigit:atIndex:">segmentPathForDigit:atIndex:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="MFLTransformingDigit Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">MFLTransformingDigit Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">UIView</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">MFLTransformingDigit.h<br />MFLTransformingDigit.m</td>
+</tr>
+						</tbody></table></div>
+					
+					
+					
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>This is a base transforming digit class</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/strokeColor">&nbsp;&nbsp;strokeColor</a></code>
+		<span class="tooltip"><p>Stroke Color determines your digit&rsquo;s fill color</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/lineThickness">&nbsp;&nbsp;lineThickness</a></code>
+		<span class="tooltip"><p>Line Thickness determines how thick the lines are on your digit</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/animationDuration">&nbsp;&nbsp;animationDuration</a></code>
+		<span class="tooltip"><p>Time it takes to transform from one digit to another</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/calculationMode">&nbsp;&nbsp;calculationMode</a></code>
+		<span class="tooltip"><p>Calculation mode for transformation animation. Use the values defined in CAAnimation.h, such as kCAAnimationLinear.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/timingFunction">&nbsp;&nbsp;timingFunction</a></code>
+		<span class="tooltip"><p>Timing function for the transformation between digits</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/animationStyle">&nbsp;&nbsp;animationStyle</a></code>
+		<span class="tooltip"><p>Values defined above.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/rotate3DStyle">&nbsp;&nbsp;rotate3DStyle</a></code>
+		<span class="tooltip"><p>Determines 3D rotation effect, none, horizontal, vertical or both. Values defined above.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/scaleStyle">&nbsp;&nbsp;scaleStyle</a></code>
+		<span class="tooltip"><p>Set to add Pinhole scaling effect to your animation transformation.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shouldRotateIn2D">&nbsp;&nbsp;shouldRotateIn2D</a></code>
+		<span class="tooltip"><p>Set to true will add a flat 2D rotation to the digits transformation</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/shouldAnimationNewSuperview">&nbsp;&nbsp;shouldAnimationNewSuperview</a></code>
+		<span class="tooltip"><p>Defaults to true, will animate stroke when added to superview.</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithFrame:initialDigit:foldingStyle:">&ndash;&nbsp;initWithFrame:initialDigit:foldingStyle:</a></code>
+		<span class="tooltip"><p>Primary initializer</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithFoldingDigit:">&ndash;&nbsp;initWithFoldingDigit:</a></code>
+		<span class="tooltip"><p>Cloning method</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/linePathForDigit:">&ndash;&nbsp;linePathForDigit:</a></code>
+		<span class="tooltip"><p>Will draw UIBezierpath and return it for your own use.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/segmentPathForDigit:atIndex:">&ndash;&nbsp;segmentPathForDigit:atIndex:</a></code>
+		<span class="tooltip"><p>Will draw UIBezierpath and return it for your own use.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeFromSuperview:">&ndash;&nbsp;removeFromSuperview:</a></code>
+		<span class="tooltip"><p>A way to animate the superview removal</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/drawnSegments">&nbsp;&nbsp;drawnSegments</a></code>
+		<span class="tooltip"><p>Modifying the following properties will cause undefined behavior</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/drawnDigit">&nbsp;&nbsp;drawnDigit</a></code>
+		<span class="tooltip"><p>Modifying the following properties will cause undefined behavior</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/currentDigit">&nbsp;&nbsp;currentDigit</a></code>
+		<span class="tooltip"><p>Modifying the following properties will cause undefined behavior</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/foldingStyle">&nbsp;&nbsp;foldingStyle</a></code>
+		<span class="tooltip"><p>Modifying the following properties will cause undefined behavior</p></span>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						
+						<h3 class="subsubtitle task-title">Other Methods</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/animateToDigit:">&ndash;&nbsp;animateToDigit:</a></code>
+		<span class="tooltip"><p>Will animate directly to a digit, skipping those in between the current digit and digit argument</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/animateToDigit:completion:">&ndash;&nbsp;animateToDigit:completion:</a></code>
+		<span class="tooltip"><p>Will animate directly to a digit, skipping those in between the current digit and digit argument</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/decrement">&ndash;&nbsp;decrement</a></code>
+		<span class="tooltip"><p>Will decrement by one number, @Note: 0 will decrement to 9.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/decrementWithCompletion:">&ndash;&nbsp;decrementWithCompletion:</a></code>
+		<span class="tooltip"><p>Will <a href="#//api/name/decrement">decrement</a> by one number, @Note: 0 will <a href="#//api/name/decrement">decrement</a> to 9.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/increment">&ndash;&nbsp;increment</a></code>
+		<span class="tooltip"><p>Will increment by one number, @Note 9 will increment to 0.</p></span>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/incrementWithCompletion:">&ndash;&nbsp;incrementWithCompletion:</a></code>
+		<span class="tooltip"><p>Will <a href="#//api/name/increment">increment</a> by one number, @Note 9 will <a href="#//api/name/increment">increment</a> to 0.</p></span>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/animationDuration" title="animationDuration"></a>
+	<h3 class="subsubtitle method-title">animationDuration</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Time it takes to transform from one digit to another</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property CGFloat animationDuration</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MFLTransformingDigit.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/animationStyle" title="animationStyle"></a>
+	<h3 class="subsubtitle method-title">animationStyle</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Values defined above.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property MFLAnimationStyle animationStyle</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MFLTransformingDigit.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/calculationMode" title="calculationMode"></a>
+	<h3 class="subsubtitle method-title">calculationMode</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Calculation mode for transformation animation. Use the values defined in CAAnimation.h, such as kCAAnimationLinear.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property NSString *calculationMode</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MFLTransformingDigit.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/currentDigit" title="currentDigit"></a>
+	<h3 class="subsubtitle method-title">currentDigit</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Modifying the following properties will cause undefined behavior</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property NSInteger currentDigit</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MFLTransformingDigit.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/drawnDigit" title="drawnDigit"></a>
+	<h3 class="subsubtitle method-title">drawnDigit</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Modifying the following properties will cause undefined behavior</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property CAShapeLayer *drawnDigit</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MFLTransformingDigit.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/drawnSegments" title="drawnSegments"></a>
+	<h3 class="subsubtitle method-title">drawnSegments</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Modifying the following properties will cause undefined behavior</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property NSMutableArray *drawnSegments</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MFLTransformingDigit.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/foldingStyle" title="foldingStyle"></a>
+	<h3 class="subsubtitle method-title">foldingStyle</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Modifying the following properties will cause undefined behavior</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property MFLFoldingStyle foldingStyle</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MFLTransformingDigit.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/lineThickness" title="lineThickness"></a>
+	<h3 class="subsubtitle method-title">lineThickness</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Line Thickness determines how thick the lines are on your digit</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) CGFloat lineThickness</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MFLTransformingDigit.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/rotate3DStyle" title="rotate3DStyle"></a>
+	<h3 class="subsubtitle method-title">rotate3DStyle</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Determines 3D rotation effect, none, horizontal, vertical or both. Values defined above.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property MFLRotateAnimationStyle rotate3DStyle</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MFLTransformingDigit.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/scaleStyle" title="scaleStyle"></a>
+	<h3 class="subsubtitle method-title">scaleStyle</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set to add Pinhole scaling effect to your animation transformation.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property MFLScaleAnimationStyle scaleStyle</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MFLTransformingDigit.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/shouldAnimationNewSuperview" title="shouldAnimationNewSuperview"></a>
+	<h3 class="subsubtitle method-title">shouldAnimationNewSuperview</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Defaults to true, will animate stroke when added to superview.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property BOOL shouldAnimationNewSuperview</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MFLTransformingDigit.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/shouldRotateIn2D" title="shouldRotateIn2D"></a>
+	<h3 class="subsubtitle method-title">shouldRotateIn2D</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set to true will add a flat 2D rotation to the digits transformation</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property BOOL shouldRotateIn2D</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MFLTransformingDigit.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/strokeColor" title="strokeColor"></a>
+	<h3 class="subsubtitle method-title">strokeColor</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Stroke Color determines your digit&rsquo;s fill color</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic) CGColorRef strokeColor</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MFLTransformingDigit.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/timingFunction" title="timingFunction"></a>
+	<h3 class="subsubtitle method-title">timingFunction</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Timing function for the transformation between digits</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property CAMediaTimingFunction *timingFunction</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MFLTransformingDigit.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/animateToDigit:" title="animateToDigit:"></a>
+	<h3 class="subsubtitle method-title">animateToDigit:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Will animate directly to a digit, skipping those in between the current digit and digit argument</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)animateToDigit:(NSInteger)<em>digit</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>digit</em></dt>
+			<dd><p>Digit to transform to</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MFLTransformingDigit+Animation.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/animateToDigit:completion:" title="animateToDigit:completion:"></a>
+	<h3 class="subsubtitle method-title">animateToDigit:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Will animate directly to a digit, skipping those in between the current digit and digit argument</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)animateToDigit:(NSInteger)<em>digit</em> completion:(void ( ^ ) ( BOOL ))<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>digit</em></dt>
+			<dd><p>Digit to transform to</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>Allows you to execute code on the completion of the animation</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MFLTransformingDigit+Animation.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/decrement" title="decrement"></a>
+	<h3 class="subsubtitle method-title">decrement</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Will decrement by one number, @Note: 0 will decrement to 9.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)decrement</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MFLTransformingDigit+Animation.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/decrementWithCompletion:" title="decrementWithCompletion:"></a>
+	<h3 class="subsubtitle method-title">decrementWithCompletion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Will <a href="#//api/name/decrement">decrement</a> by one number, @Note: 0 will <a href="#//api/name/decrement">decrement</a> to 9.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)decrementWithCompletion:(void ( ^ ) ( BOOL ))<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>Allows you to execute code on the completion of the animation</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MFLTransformingDigit+Animation.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/increment" title="increment"></a>
+	<h3 class="subsubtitle method-title">increment</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Will increment by one number, @Note 9 will increment to 0.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)increment</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MFLTransformingDigit+Animation.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/incrementWithCompletion:" title="incrementWithCompletion:"></a>
+	<h3 class="subsubtitle method-title">incrementWithCompletion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Will <a href="#//api/name/increment">increment</a> by one number, @Note 9 will <a href="#//api/name/increment">increment</a> to 0.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)incrementWithCompletion:(void ( ^ ) ( BOOL ))<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>Allows you to execute code on the completion of the animation</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MFLTransformingDigit+Animation.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithFoldingDigit:" title="initWithFoldingDigit:"></a>
+	<h3 class="subsubtitle method-title">initWithFoldingDigit:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Cloning method</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)initWithFoldingDigit:(MFLTransformingDigit *)<em>digit</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>digit</em></dt>
+			<dd><p>The MFLTransformingDigit to copy.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Will return a duplicate MFLTransforming digit.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MFLTransformingDigit.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithFrame:initialDigit:foldingStyle:" title="initWithFrame:initialDigit:foldingStyle:"></a>
+	<h3 class="subsubtitle method-title">initWithFrame:initialDigit:foldingStyle:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Primary initializer</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)initWithFrame:(CGRect)<em>frame</em> initialDigit:(NSInteger)<em>initialDigit</em> foldingStyle:(MFLFoldingStyle)<em>foldingStyle</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>frame</em></dt>
+			<dd><p>Frame to draw within</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>initialDigit</em></dt>
+			<dd><p>Initial Digit to start as</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>foldingStyle</em></dt>
+			<dd><p>Folding style, currently draws either a single line, or multiple line segments.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Returns an initialized MFLTransformingDigit object</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MFLTransformingDigit.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/linePathForDigit:" title="linePathForDigit:"></a>
+	<h3 class="subsubtitle method-title">linePathForDigit:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Will draw UIBezierpath and return it for your own use.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (UIBezierPath *)linePathForDigit:(NSInteger)<em>digit</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>digit</em></dt>
+			<dd><p>The digit to draw the path for.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Same bezier path used to draw the digit in kMFLSingleLineFold folding style.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MFLTransformingDigit.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/removeFromSuperview:" title="removeFromSuperview:"></a>
+	<h3 class="subsubtitle method-title">removeFromSuperview:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A way to animate the superview removal</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)removeFromSuperview:(BOOL)<em>animated</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>animated</em></dt>
+			<dd><p>If true, will animate by erasing the line and then removing form superview.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MFLTransformingDigit.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/segmentPathForDigit:atIndex:" title="segmentPathForDigit:atIndex:"></a>
+	<h3 class="subsubtitle method-title">segmentPathForDigit:atIndex:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Will draw UIBezierpath and return it for your own use.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (UIBezierPath *)segmentPathForDigit:(NSInteger)<em>digit</em> atIndex:(NSInteger)<em>idx</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>digit</em></dt>
+			<dd><p>The digit to draw the path for.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>idx</em></dt>
+			<dd><p>The segment</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	<div class="method-subsection return">
+		<h4 class="method-subtitle parameter-title">Return Value</h4>
+		<p>Same bezier path used to draw the digit in kMFLSegmentFold folding style.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">MFLTransformingDigit.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 FoleyProductions. All rights reserved. (Last updated: 2013-10-26)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 961)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Constants/MFLRotateAnimationStyle.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/c/tdef/MFLRotateAnimationStyle</TokenIdentifier>
+			<Abstract type="html">Determines 3D rotation effect, none, horizontal, vertical or both.</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>
+			
+			<NodeRef refid="5"/>
+		</Token>
+		
+		
+	</File>
+</Tokens>

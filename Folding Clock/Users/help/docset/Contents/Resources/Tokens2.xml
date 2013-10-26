@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MFLTransformingDigit.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MFLTransformingDigit</TokenIdentifier>
+			<Abstract type="html">This is a base transforming digit class</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>
+			
+			<NodeRef refid="2"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/setStrokeColor:</TokenIdentifier>
+			<Abstract type="html">Stroke Color determines your digit&apos;s fill color</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) CGColorRef strokeColor</Declaration>
+			
+			
+			<Anchor>//api/name/strokeColor</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/strokeColor</TokenIdentifier>
+			<Abstract type="html">Stroke Color determines your digit&apos;s fill color</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) CGColorRef strokeColor</Declaration>
+			
+			
+			<Anchor>//api/name/strokeColor</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MFLTransformingDigit/strokeColor</TokenIdentifier>
+			<Abstract type="html">Stroke Color determines your digit&apos;s fill color</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) CGColorRef strokeColor</Declaration>
+			
+			
+			<Anchor>//api/name/strokeColor</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/setLineThickness:</TokenIdentifier>
+			<Abstract type="html">Line Thickness determines how thick the lines are on your digit</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) CGFloat lineThickness</Declaration>
+			
+			
+			<Anchor>//api/name/lineThickness</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/lineThickness</TokenIdentifier>
+			<Abstract type="html">Line Thickness determines how thick the lines are on your digit</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) CGFloat lineThickness</Declaration>
+			
+			
+			<Anchor>//api/name/lineThickness</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MFLTransformingDigit/lineThickness</TokenIdentifier>
+			<Abstract type="html">Line Thickness determines how thick the lines are on your digit</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property (nonatomic) CGFloat lineThickness</Declaration>
+			
+			
+			<Anchor>//api/name/lineThickness</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/setAnimationDuration:</TokenIdentifier>
+			<Abstract type="html">Time it takes to transform from one digit to another</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property CGFloat animationDuration</Declaration>
+			
+			
+			<Anchor>//api/name/animationDuration</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/animationDuration</TokenIdentifier>
+			<Abstract type="html">Time it takes to transform from one digit to another</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property CGFloat animationDuration</Declaration>
+			
+			
+			<Anchor>//api/name/animationDuration</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MFLTransformingDigit/animationDuration</TokenIdentifier>
+			<Abstract type="html">Time it takes to transform from one digit to another</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property CGFloat animationDuration</Declaration>
+			
+			
+			<Anchor>//api/name/animationDuration</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/setCalculationMode:</TokenIdentifier>
+			<Abstract type="html">Calculation mode for transformation animation. Use the values defined in CAAnimation.h, such as kCAAnimationLinear.</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property NSString *calculationMode</Declaration>
+			
+			
+			<Anchor>//api/name/calculationMode</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/calculationMode</TokenIdentifier>
+			<Abstract type="html">Calculation mode for transformation animation. Use the values defined in CAAnimation.h, such as kCAAnimationLinear.</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property NSString *calculationMode</Declaration>
+			
+			
+			<Anchor>//api/name/calculationMode</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MFLTransformingDigit/calculationMode</TokenIdentifier>
+			<Abstract type="html">Calculation mode for transformation animation. Use the values defined in CAAnimation.h, such as kCAAnimationLinear.</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property NSString *calculationMode</Declaration>
+			
+			
+			<Anchor>//api/name/calculationMode</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/setTimingFunction:</TokenIdentifier>
+			<Abstract type="html">Timing function for the transformation between digits</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property CAMediaTimingFunction *timingFunction</Declaration>
+			
+			
+			<Anchor>//api/name/timingFunction</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/timingFunction</TokenIdentifier>
+			<Abstract type="html">Timing function for the transformation between digits</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property CAMediaTimingFunction *timingFunction</Declaration>
+			
+			
+			<Anchor>//api/name/timingFunction</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MFLTransformingDigit/timingFunction</TokenIdentifier>
+			<Abstract type="html">Timing function for the transformation between digits</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property CAMediaTimingFunction *timingFunction</Declaration>
+			
+			
+			<Anchor>//api/name/timingFunction</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/setAnimationStyle:</TokenIdentifier>
+			<Abstract type="html">Values defined above.</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property MFLAnimationStyle animationStyle</Declaration>
+			
+			
+			<Anchor>//api/name/animationStyle</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/animationStyle</TokenIdentifier>
+			<Abstract type="html">Values defined above.</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property MFLAnimationStyle animationStyle</Declaration>
+			
+			
+			<Anchor>//api/name/animationStyle</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MFLTransformingDigit/animationStyle</TokenIdentifier>
+			<Abstract type="html">Values defined above.</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property MFLAnimationStyle animationStyle</Declaration>
+			
+			
+			<Anchor>//api/name/animationStyle</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/setRotate3DStyle:</TokenIdentifier>
+			<Abstract type="html">Determines 3D rotation effect, none, horizontal, vertical or both. Values defined above.</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property MFLRotateAnimationStyle rotate3DStyle</Declaration>
+			
+			
+			<Anchor>//api/name/rotate3DStyle</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/rotate3DStyle</TokenIdentifier>
+			<Abstract type="html">Determines 3D rotation effect, none, horizontal, vertical or both. Values defined above.</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property MFLRotateAnimationStyle rotate3DStyle</Declaration>
+			
+			
+			<Anchor>//api/name/rotate3DStyle</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MFLTransformingDigit/rotate3DStyle</TokenIdentifier>
+			<Abstract type="html">Determines 3D rotation effect, none, horizontal, vertical or both. Values defined above.</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property MFLRotateAnimationStyle rotate3DStyle</Declaration>
+			
+			
+			<Anchor>//api/name/rotate3DStyle</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/setScaleStyle:</TokenIdentifier>
+			<Abstract type="html">Set to add Pinhole scaling effect to your animation transformation.</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property MFLScaleAnimationStyle scaleStyle</Declaration>
+			
+			
+			<Anchor>//api/name/scaleStyle</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/scaleStyle</TokenIdentifier>
+			<Abstract type="html">Set to add Pinhole scaling effect to your animation transformation.</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property MFLScaleAnimationStyle scaleStyle</Declaration>
+			
+			
+			<Anchor>//api/name/scaleStyle</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MFLTransformingDigit/scaleStyle</TokenIdentifier>
+			<Abstract type="html">Set to add Pinhole scaling effect to your animation transformation.</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property MFLScaleAnimationStyle scaleStyle</Declaration>
+			
+			
+			<Anchor>//api/name/scaleStyle</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/setShouldRotateIn2D:</TokenIdentifier>
+			<Abstract type="html">Set to true will add a flat 2D rotation to the digits transformation</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property BOOL shouldRotateIn2D</Declaration>
+			
+			
+			<Anchor>//api/name/shouldRotateIn2D</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/shouldRotateIn2D</TokenIdentifier>
+			<Abstract type="html">Set to true will add a flat 2D rotation to the digits transformation</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property BOOL shouldRotateIn2D</Declaration>
+			
+			
+			<Anchor>//api/name/shouldRotateIn2D</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MFLTransformingDigit/shouldRotateIn2D</TokenIdentifier>
+			<Abstract type="html">Set to true will add a flat 2D rotation to the digits transformation</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property BOOL shouldRotateIn2D</Declaration>
+			
+			
+			<Anchor>//api/name/shouldRotateIn2D</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/setShouldAnimationNewSuperview:</TokenIdentifier>
+			<Abstract type="html">Defaults to true, will animate stroke when added to superview.</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property BOOL shouldAnimationNewSuperview</Declaration>
+			
+			
+			<Anchor>//api/name/shouldAnimationNewSuperview</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/shouldAnimationNewSuperview</TokenIdentifier>
+			<Abstract type="html">Defaults to true, will animate stroke when added to superview.</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property BOOL shouldAnimationNewSuperview</Declaration>
+			
+			
+			<Anchor>//api/name/shouldAnimationNewSuperview</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MFLTransformingDigit/shouldAnimationNewSuperview</TokenIdentifier>
+			<Abstract type="html">Defaults to true, will animate stroke when added to superview.</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property BOOL shouldAnimationNewSuperview</Declaration>
+			
+			
+			<Anchor>//api/name/shouldAnimationNewSuperview</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/initWithFrame:initialDigit:foldingStyle:</TokenIdentifier>
+			<Abstract type="html">Primary initializer</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithFrame:(CGRect)frame initialDigit:(NSInteger)initialDigit foldingStyle:(MFLFoldingStyle)foldingStyle</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>frame</Name>
+					<Abstract type="html">Frame to draw within</Abstract>
+				</Parameter><Parameter>
+					<Name>initialDigit</Name>
+					<Abstract type="html">Initial Digit to start as</Abstract>
+				</Parameter><Parameter>
+					<Name>foldingStyle</Name>
+					<Abstract type="html">Folding style, currently draws either a single line, or multiple line segments.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Returns an initialized MFLTransformingDigit object</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithFrame:initialDigit:foldingStyle:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/initWithFoldingDigit:</TokenIdentifier>
+			<Abstract type="html">Cloning method</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>- (id)initWithFoldingDigit:(MFLTransformingDigit *)digit</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>digit</Name>
+					<Abstract type="html">The MFLTransformingDigit to copy.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Will return a duplicate MFLTransforming digit.</Abstract></ReturnValue>
+			<Anchor>//api/name/initWithFoldingDigit:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/linePathForDigit:</TokenIdentifier>
+			<Abstract type="html">Will draw UIBezierpath and return it for your own use.</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>- (UIBezierPath *)linePathForDigit:(NSInteger)digit</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>digit</Name>
+					<Abstract type="html">The digit to draw the path for.</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Same bezier path used to draw the digit in kMFLSingleLineFold folding style.</Abstract></ReturnValue>
+			<Anchor>//api/name/linePathForDigit:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/segmentPathForDigit:atIndex:</TokenIdentifier>
+			<Abstract type="html">Will draw UIBezierpath and return it for your own use.</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>- (UIBezierPath *)segmentPathForDigit:(NSInteger)digit atIndex:(NSInteger)idx</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>digit</Name>
+					<Abstract type="html">The digit to draw the path for.</Abstract>
+				</Parameter><Parameter>
+					<Name>idx</Name>
+					<Abstract type="html">The segment</Abstract>
+				</Parameter>
+			</Parameters>
+			<ReturnValue><Abstract type="html">Same bezier path used to draw the digit in kMFLSegmentFold folding style.</Abstract></ReturnValue>
+			<Anchor>//api/name/segmentPathForDigit:atIndex:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/removeFromSuperview:</TokenIdentifier>
+			<Abstract type="html">A way to animate the superview removal</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>- (void)removeFromSuperview:(BOOL)animated</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>animated</Name>
+					<Abstract type="html">If true, will animate by erasing the line and then removing form superview.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/removeFromSuperview:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/setDrawnSegments:</TokenIdentifier>
+			<Abstract type="html">Modifying the following properties will cause undefined behavior</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property NSMutableArray *drawnSegments</Declaration>
+			
+			
+			<Anchor>//api/name/drawnSegments</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/drawnSegments</TokenIdentifier>
+			<Abstract type="html">Modifying the following properties will cause undefined behavior</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property NSMutableArray *drawnSegments</Declaration>
+			
+			
+			<Anchor>//api/name/drawnSegments</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MFLTransformingDigit/drawnSegments</TokenIdentifier>
+			<Abstract type="html">Modifying the following properties will cause undefined behavior</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property NSMutableArray *drawnSegments</Declaration>
+			
+			
+			<Anchor>//api/name/drawnSegments</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/setDrawnDigit:</TokenIdentifier>
+			<Abstract type="html">Modifying the following properties will cause undefined behavior</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property CAShapeLayer *drawnDigit</Declaration>
+			
+			
+			<Anchor>//api/name/drawnDigit</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/drawnDigit</TokenIdentifier>
+			<Abstract type="html">Modifying the following properties will cause undefined behavior</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property CAShapeLayer *drawnDigit</Declaration>
+			
+			
+			<Anchor>//api/name/drawnDigit</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MFLTransformingDigit/drawnDigit</TokenIdentifier>
+			<Abstract type="html">Modifying the following properties will cause undefined behavior</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property CAShapeLayer *drawnDigit</Declaration>
+			
+			
+			<Anchor>//api/name/drawnDigit</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/setCurrentDigit:</TokenIdentifier>
+			<Abstract type="html">Modifying the following properties will cause undefined behavior</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property NSInteger currentDigit</Declaration>
+			
+			
+			<Anchor>//api/name/currentDigit</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/currentDigit</TokenIdentifier>
+			<Abstract type="html">Modifying the following properties will cause undefined behavior</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property NSInteger currentDigit</Declaration>
+			
+			
+			<Anchor>//api/name/currentDigit</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MFLTransformingDigit/currentDigit</TokenIdentifier>
+			<Abstract type="html">Modifying the following properties will cause undefined behavior</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property NSInteger currentDigit</Declaration>
+			
+			
+			<Anchor>//api/name/currentDigit</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/setFoldingStyle:</TokenIdentifier>
+			<Abstract type="html">Modifying the following properties will cause undefined behavior</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property MFLFoldingStyle foldingStyle</Declaration>
+			
+			
+			<Anchor>//api/name/foldingStyle</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/foldingStyle</TokenIdentifier>
+			<Abstract type="html">Modifying the following properties will cause undefined behavior</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property MFLFoldingStyle foldingStyle</Declaration>
+			
+			
+			<Anchor>//api/name/foldingStyle</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/MFLTransformingDigit/foldingStyle</TokenIdentifier>
+			<Abstract type="html">Modifying the following properties will cause undefined behavior</Abstract>
+			<DeclaredIn>MFLTransformingDigit.h</DeclaredIn>			
+			
+			<Declaration>@property MFLFoldingStyle foldingStyle</Declaration>
+			
+			
+			<Anchor>//api/name/foldingStyle</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/animateToDigit:</TokenIdentifier>
+			<Abstract type="html">Will animate directly to a digit, skipping those in between the current digit and digit argument</Abstract>
+			<DeclaredIn>MFLTransformingDigit+Animation.h</DeclaredIn>			
+			
+			<Declaration>- (void)animateToDigit:(NSInteger)digit</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>digit</Name>
+					<Abstract type="html">Digit to transform to</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/animateToDigit:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/animateToDigit:completion:</TokenIdentifier>
+			<Abstract type="html">Will animate directly to a digit, skipping those in between the current digit and digit argument</Abstract>
+			<DeclaredIn>MFLTransformingDigit+Animation.h</DeclaredIn>			
+			
+			<Declaration>- (void)animateToDigit:(NSInteger)digit completion:(void ( ^ ) ( BOOL ))completion</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>digit</Name>
+					<Abstract type="html">Digit to transform to</Abstract>
+				</Parameter><Parameter>
+					<Name>completion</Name>
+					<Abstract type="html">Allows you to execute code on the completion of the animation</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/animateToDigit:completion:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/decrement</TokenIdentifier>
+			<Abstract type="html">Will decrement by one number, @Note: 0 will decrement to 9.</Abstract>
+			<DeclaredIn>MFLTransformingDigit+Animation.h</DeclaredIn>			
+			
+			<Declaration>- (void)decrement</Declaration>
+			
+			
+			<Anchor>//api/name/decrement</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/decrementWithCompletion:</TokenIdentifier>
+			<Abstract type="html">Will decrement by one number, @Note: 0 will decrement to 9.</Abstract>
+			<DeclaredIn>MFLTransformingDigit+Animation.h</DeclaredIn>			
+			
+			<Declaration>- (void)decrementWithCompletion:(void ( ^ ) ( BOOL ))completion</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>completion</Name>
+					<Abstract type="html">Allows you to execute code on the completion of the animation</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/decrementWithCompletion:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/increment</TokenIdentifier>
+			<Abstract type="html">Will increment by one number, @Note 9 will increment to 0.</Abstract>
+			<DeclaredIn>MFLTransformingDigit+Animation.h</DeclaredIn>			
+			
+			<Declaration>- (void)increment</Declaration>
+			
+			
+			<Anchor>//api/name/increment</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/MFLTransformingDigit/incrementWithCompletion:</TokenIdentifier>
+			<Abstract type="html">Will increment by one number, @Note 9 will increment to 0.</Abstract>
+			<DeclaredIn>MFLTransformingDigit+Animation.h</DeclaredIn>			
+			
+			<Declaration>- (void)incrementWithCompletion:(void ( ^ ) ( BOOL ))completion</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>completion</Name>
+					<Abstract type="html">Allows you to execute code on the completion of the animation</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/incrementWithCompletion:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+	</File>
+</Tokens>

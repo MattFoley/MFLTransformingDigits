@@ -55,8 +55,8 @@
 
 #pragma mark Ignore Me!
 
-- (void)animateSegmentsToDigit:(NSInteger)digit completion:completion;
-- (void)animateToDigitFlat:(NSInteger)digit completion:completion;
+- (void)animateSegmentsToDigit:(NSInteger)digit completion:(void (^)(BOOL))completion;;
+- (void)animateToDigitFlat:(NSInteger)digit completion:(void (^)(BOOL))completion;;
 
 - (void)animateOnScreen;
 

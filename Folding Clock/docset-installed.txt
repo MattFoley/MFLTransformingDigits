@@ -1,0 +1,4 @@
+Documentation set was installed to Xcode!
+
+Path: /Users/teejay/Library/Developer/Shared/Documentation/DocSets/com.foleyProductions.Transforming-Digits-Example.docset
+Time: 2013-10-26 18:43:44 +0000

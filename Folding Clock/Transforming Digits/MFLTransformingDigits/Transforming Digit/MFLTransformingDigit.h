@@ -11,37 +11,82 @@
 /**
  *  Dictates whether to draw digits as a single line or series of segments.
  */
-typedef enum {
+typedef NS_ENUM(NSInteger, MFLFoldingStyle) {
+    /**
+     *  Will draw a single line and transform that
+     */
     kMFLSingleLineFold,
+    
+    /**
+     *  Will draw multiple segments and transform those individually.
+     */
     kMFLSegmentFold
-} MFLFoldingStyle;
+};
 
 
-typedef enum {
-    kMFLAnimationSmooth,         //Standard animation - likely what you want for now.
-    kMFLAnimationBounce,         //Not yet implemented
-    kMFLAnimationCubicKeyframe,   //Uses CAKeyFrameAnimaton
+/**
+ *  Possible animation styles.
+ */
+typedef NS_ENUM(NSInteger, MFLAnimationStyle) {
+    /**
+     *  Standard animation - likely what you want for now.
+     */
+    kMFLAnimationSmooth,
+    
+    /**
+     *  Not yet implemented
+     */
+    kMFLAnimationBounce,
+    
+    /**
+     *  Uses CAKeyFrameAnimaton
+     */
+    kMFLAnimationCubicKeyframe,
+    
+    /**
+     *  Will restroke the digit for each transform
+     */
     kMFLAnimationRestroke
-} MFLAnimationStyle;
+};
 
 /**
  *  Determines 3D rotation effect, none, horizontal, vertical or both.
  */
-typedef enum {
+typedef NS_ENUM(NSInteger, MFLRotateAnimationStyle) {
+    /**
+     *  Will flip vertically 3D
+     */
     kMFLVertical3D,
+    
+    /**
+     *  Will flip horizontally 3d
+     */
     kMFLHorizontal3D,
+    
+    /**
+     *  Will flip both horizontally and vertically simultaneously
+     */
     kMFLFull3D,
+    
+    /**
+     *  Will not rotate 3D
+     */
     kMFLNoRotate
-} MFLRotateAnimationStyle;
+};
 
 /**
  *  Values to define scaling animation for digit transform
  */
-typedef enum {
+typedef NS_ENUM(NSInteger, MFLScaleAnimationStyle) {
+    /**
+     *  Will pinhole scale the digit while transforming
+     */
     kMFLPinHole,
+    /**
+     *  Will do no scaling during transform
+     */
     kMFLNoScale
-} MFLScaleAnimationStyle;
-
+};
 
 /**
  *  This is a base transforming digit class
@@ -134,6 +179,7 @@ typedef enum {
  *  Will draw UIBezierpath and return it for your own use.
  *
  *  @param digit The digit to draw the path for.
+ *  @param idx The segment
  *
  *  @return Same bezier path used to draw the digit in kMFLSegmentFold folding style.
  */

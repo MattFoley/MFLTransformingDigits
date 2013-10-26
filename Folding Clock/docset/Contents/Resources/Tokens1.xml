@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/MFLTransformingClock.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/MFLTransformingClock</TokenIdentifier>
+			<Abstract type="html">Not yet implemented.</Abstract>
+			<DeclaredIn>MFLTransformingClock.h</DeclaredIn>
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+	</File>
+</Tokens>
