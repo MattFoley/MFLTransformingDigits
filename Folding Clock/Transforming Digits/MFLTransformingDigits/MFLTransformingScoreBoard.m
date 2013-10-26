@@ -8,7 +8,7 @@
 
 #import "MFLTransformingScoreBoard.h"
 
-static CGFloat kMFLMaxTimerRefreshRate = 0.04; // = 60 fps
+static CGFloat kMFLMaxTimerRefreshRate = 0.1; // = 60 fps
 
 @interface MFLTransformingScoreBoard ()
 
@@ -19,7 +19,6 @@ static CGFloat kMFLMaxTimerRefreshRate = 0.04; // = 60 fps
 @property NSMutableArray *digitArray;
 
 @property NSInteger nextValue;
-@property NSInteger targetValue;
 @property NSInteger prevValue;
 
 @property NSTimeInterval stepDuration;
@@ -68,7 +67,7 @@ static CGFloat kMFLMaxTimerRefreshRate = 0.04; // = 60 fps
     _baseDigit = digit;
     
     self.digitArray = [@[] mutableCopy];
-    self.animationDuration = 2.0;
+    self.animationDuration = 3.0;
     
     self.prevValue = initialValue;
     self.targetValue = initialValue;
@@ -102,6 +101,7 @@ static CGFloat kMFLMaxTimerRefreshRate = 0.04; // = 60 fps
     [self.baseDigit  setCurrentDigit:value];
     MFLTransformingDigit *newDigit = [[MFLTransformingDigit alloc] initWithFoldingDigit:self.baseDigit];
     
+    
     CGRect prevDigitsFrame = [self.digitArray.lastObject frame];
     if (CGRectEqualToRect(prevDigitsFrame, CGRectZero)) {
         prevDigitsFrame.size = self.baseDigit.frame.size;
@@ -121,8 +121,9 @@ static CGFloat kMFLMaxTimerRefreshRate = 0.04; // = 60 fps
 - (void)removeMostSignificantDigit
 {
     MFLTransformingDigit *mostSigDigit = self.digitArray.lastObject;
-    [mostSigDigit removeFromSuperview:YES];
+    [mostSigDigit setAnimationDuration:.2];
     [self.digitArray removeObject:mostSigDigit];
+    [mostSigDigit removeFromSuperview:YES];
 }
 
 - (void)decrementByValue:(NSInteger)value
@@ -142,7 +143,7 @@ static CGFloat kMFLMaxTimerRefreshRate = 0.04; // = 60 fps
 
 - (void)incrementByValue:(NSInteger)value completion:(void (^)(BOOL success))completion
 {
-    [self setToValue:self.targetValue + value withDuration:self.animationDuration completion:nil];
+    [self setToValue:self.targetValue + value withDuration:self.animationDuration completion:completion];
 }
 
 - (void)setToValue:(NSInteger)value
@@ -157,6 +158,8 @@ static CGFloat kMFLMaxTimerRefreshRate = 0.04; // = 60 fps
 
 - (void)setToValue:(NSInteger)value withDuration:(NSTimeInterval)timeInterval completion:(void (^)(BOOL success))completion
 {
+    [self stopAnimation];
+    
     if (value < 0) {
         value = 0;
     }
@@ -167,7 +170,7 @@ static CGFloat kMFLMaxTimerRefreshRate = 0.04; // = 60 fps
     
     self.animationDuration = timeInterval;
     
-
+    
     NSInteger stepCount = ABS(self.prevValue - self.targetValue);
     self.neededInterval = (self.animationDuration/stepCount);
     
@@ -186,7 +189,7 @@ static CGFloat kMFLMaxTimerRefreshRate = 0.04; // = 60 fps
     if (_completionBlock) {
         _completionBlock(NO);
     }
-    
+    self.targetValue = self.nextValue;
     [self.animationTimer invalidate];
 }
 
@@ -207,71 +210,78 @@ static CGFloat kMFLMaxTimerRefreshRate = 0.04; // = 60 fps
     self.nextValue = (self.animationDirection == kMFLAnimateDown ? self.nextValue-step : self.nextValue+step);
     
     // check target mode finish conditions
-
-        if (self.nextValue == self.targetValue ||
-            (self.animationDirection == kMFLAnimateUp && self.nextValue > self.targetValue) ||
-            (self.animationDirection == kMFLAnimateDown && self.nextValue < self.targetValue))
-        {
-            self.nextValue = self.prevValue = self.targetValue;
-            
-            [self updateVisibleValue];
-            
-            if (self.completionBlock != nil) {
-                self.completionBlock(YES);
-                self.completionBlock = nil;
-            }
-            [self stopAnimation];
-            return;
-        } else {
-            [self updateVisibleValue];
+    
+    if (self.nextValue == self.targetValue ||
+        (self.animationDirection == kMFLAnimateUp && self.nextValue > self.targetValue) ||
+        (self.animationDirection == kMFLAnimateDown && self.nextValue < self.targetValue))
+    {
+        self.nextValue = self.prevValue = self.targetValue;
+        
+        [self updateVisibleValue:step];
+        
+        if (self.completionBlock != nil) {
+            self.completionBlock(YES);
+            self.completionBlock = nil;
         }
+        [self stopAnimation];
+        return;
+    } else {
+        [self updateVisibleValue:step];
+    }
     
 }
 
-- (void)updateVisibleValue
+- (void)updateVisibleValue:(NSInteger)stepValue;
 {
     
     NSString *stringValue = [@(self.nextValue) stringValue];
     
-    NSInteger didLoseSignificantDigit = NO;
+    
     if (self.animationDirection == kMFLAnimateDown) {
-        NSInteger prevStringLen = [[@(self.nextValue + 1) stringValue] length];
-        didLoseSignificantDigit = (prevStringLen > stringValue.length);
+        NSInteger prevStringLen = [[@(self.nextValue + stepValue) stringValue] length];
+        BOOL didLoseSignificantDigit = (prevStringLen > stringValue.length);
+        
+        if (didLoseSignificantDigit) {
+            //Animate from current digit to zero before disappearing
+            /*
+            if (stringValue.length > 1) {
+                MFLTransformingDigit *mostSigDigit = self.digitArray.lastObject;
+                [self.digitArray removeObject:mostSigDigit];
+                [mostSigDigit animateToDigit:0 completion:^(BOOL success) {
+                    [mostSigDigit removeFromSuperview:YES];
+                }];
+            } else {
+                [self removeMostSignificantDigit];
+            }*/
+
+            //Animate from current digit to gone.
+            
+            [self removeMostSignificantDigit];
+        }
     }
     
     
     for (int i = (stringValue.length - 1); i >= 0 ; i--) {
         
-        if (i == 0 && didLoseSignificantDigit) {
-            if (stringValue.length > 1) {
-                [self.digitArray.firstObject animateToDigit:0 completion:^(BOOL success) {
-                    [self removeMostSignificantDigit];
-                }];
-            } else {
-                [self removeMostSignificantDigit];
-            }
-            break;
-        }
-        
         NSInteger freshDigitValue = [[stringValue substringWithRange:NSMakeRange(i, 1)] integerValue];
         if (i >= self.digitArray.count) {
-            [self addMostSignificantDigitWithValue:1];
-        } else {
-            MFLTransformingDigit *digit = (MFLTransformingDigit*) self.digitArray[self.digitArray.count-(1+i)];
-            if (freshDigitValue != digit.currentDigit) {
-                [self updateVisibleValueForDigit:digit toValue:freshDigitValue];
-            }
+            [self addMostSignificantDigitWithValue:freshDigitValue];
+            continue;
         }
         
+        MFLTransformingDigit *digit = (MFLTransformingDigit*) self.digitArray[self.digitArray.count-(1+i)];
+        if (freshDigitValue != digit.currentDigit) {
+            [self updateVisibleValueForDigit:digit toValue:freshDigitValue];
+        }
     };
 }
 
 - (void)updateVisibleValueForDigit:(MFLTransformingDigit*)digit toValue:(NSInteger)newValue
 {
     // convert to string
-    NSInteger digitSpeedFactor = [self.digitArray indexOfObject:digit] + 1;
-    
-    [digit setAnimationDuration:(self.neededInterval*digitSpeedFactor)];
+    NSInteger digitSpeedFactor = self.digitArray.count - ([self.digitArray indexOfObject:digit] + 1);
+    //NSLog(@"digit animation length %f", (self.neededInterval*10)*digitSpeedFactor);
+    [digit setAnimationDuration:fmin(.3, .1 + (.3/self.digitArray.count) * digitSpeedFactor)];
     [digit animateToDigit:newValue];
     
 }

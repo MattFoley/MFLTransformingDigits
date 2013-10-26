@@ -146,18 +146,18 @@
 
 - (IBAction)increaseScoreByRandom:(id)sender
 {
-    NSInteger randomIncrease = arc4random() % 5000 + 500;
+    NSInteger randomIncrease = arc4random() % 20000 + 5000;
     [self.scoreBoard incrementByValue:randomIncrease completion:^(BOOL success) {
-                NSLog(@"Increase Finished");
+        NSLog(@"Increase Finished %i", self.scoreBoard.targetValue);
     }];
     
 }
 
 - (IBAction)decreaseScoreByRandom:(id)sender
 {
-    NSInteger randomDecrease = arc4random() % 5000 + 500;
+    NSInteger randomDecrease = arc4random() % 20000 + 5000;
     [self.scoreBoard decrementByValue:randomDecrease completion:^(BOOL success) {
-        NSLog(@"Decrease Finished");
+        NSLog(@"Decrease Finished %i", self.scoreBoard.targetValue);
     }];
     
 }

@@ -29,6 +29,7 @@ static const NSInteger kDigitKerningValue;
 
 @property CGFloat animationDuration;
 
+@property NSInteger targetValue;
 /**
  *  This is here for autocompletion purposes, may not have the desired effect if used elsewhere.
  *

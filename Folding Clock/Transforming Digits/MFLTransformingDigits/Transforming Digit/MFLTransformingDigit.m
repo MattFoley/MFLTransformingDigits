@@ -345,6 +345,7 @@ CGAffineTransform CGAffineTransformFromRectToRect(CGRect fromRect, CGRect toRect
 
 - (void)removeFromSuperview:(BOOL)animated
 {
+    [self.layer removeAllAnimations];
     if (animated) {
         CABasicAnimation *animateStrokeEnd = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
         animateStrokeEnd.duration  = self.animationDuration;
