@@ -10,8 +10,53 @@
 
 @interface MFLTransformingDigit (Animation)
 
-- (void)animateSegmentsToDigit:(NSInteger)digit;
-- (void)animateToDigitFlat:(NSInteger)digit;
+
+/**
+ *  Will animate directly to a digit, skipping those in between the current digit and digit argument
+ *
+ *  @param digit Digit to transform to
+ */
+- (void)animateToDigit:(NSInteger)digit;
+
+/**
+ *  Will animate directly to a digit, skipping those in between the current digit and digit argument
+ *
+ *  @param digit Digit to transform to
+ *  @param completion Allows you to execute code on the completion of the animation
+ *
+ */
+- (void)animateToDigit:(NSInteger)digit completion:(void (^)(BOOL))completion;
+
+/**
+ *  Will decrement by one number, @Note: 0 will decrement to 9.
+ */
+- (void)decrement;
+
+/**
+ *  Will decrement by one number, @Note: 0 will decrement to 9.
+ *
+ *  @param completion Allows you to execute code on the completion of the animation
+ */
+- (void)decrementWithCompletion:(void (^)(BOOL))completion;
+
+/**
+ *  Will increment by one number, @Note 9 will increment to 0.
+ */
+- (void)increment;
+
+/**
+ *  Will increment by one number, @Note 9 will increment to 0.
+ *
+ *  @param completion Allows you to execute code on the completion of the animation
+ */
+- (void)incrementWithCompletion:(void (^)(BOOL))completion;
+
+
+
+#pragma mark Ignore Me!
+
+- (void)animateSegmentsToDigit:(NSInteger)digit completion:completion;
+- (void)animateToDigitFlat:(NSInteger)digit completion:completion;
 
 - (void)animateOnScreen;
 

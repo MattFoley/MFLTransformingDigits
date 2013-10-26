@@ -6,7 +6,6 @@
 //  Copyright (c) 2013 MFL. All rights reserved.
 //
 
-#import "MFLTransformingDigit+Animation.h"
 #import "MFLTransformingDigit.h"
 #import "CAAnimation+Blocks.h"
 
@@ -39,27 +38,28 @@
     }
 }
 
-- (void)animateSegmentsToDigit:(NSInteger)digit
+- (void)animateSegmentsToDigit:(NSInteger)digit completion:(void (^)(BOOL))completion;
 {
     self.currentDigit = digit;
     
     [self.drawnSegments enumerateObjectsUsingBlock:^(CAShapeLayer *segment, NSUInteger idx, BOOL *stop) {
         UIBezierPath *newPath = [self segmentPathForDigit:digit atIndex:idx];
-        [self attachAnimationForPath:newPath toLayer:segment];
+        [self attachAnimationForPath:newPath toLayer:segment completion:completion];
     }];
 }
 
-- (void)animateToDigitFlat:(NSInteger)digit
+- (void)animateToDigitFlat:(NSInteger)digit completion:(void (^)(BOOL))completion;
 {
     self.currentDigit = digit;
     UIBezierPath *newPath = [self linePathForDigit:digit];
     
-    [self attachAnimationForPath:newPath toLayer:self.drawnDigit];
+    [self attachAnimationForPath:newPath toLayer:self.drawnDigit completion:completion];
 }
 
-- (void)attachAnimationForPath:(UIBezierPath *)path toLayer:(CAShapeLayer *)layer
+- (void)attachAnimationForPath:(UIBezierPath *)path toLayer:(CAShapeLayer *)layer completion:(void (^)(BOOL))completion;
 {
     CAAnimationGroup *pathAnim = (CAAnimationGroup *)[self animationForPath:path fromPath:layer.path];
+    [pathAnim setCompletion:completion];
     [layer addAnimation:pathAnim forKey:@"segmentTransform"];
     [layer setPath:path.CGPath];
 }

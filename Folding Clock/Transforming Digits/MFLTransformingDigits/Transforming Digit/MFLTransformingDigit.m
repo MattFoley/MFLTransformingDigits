@@ -7,8 +7,8 @@
 //
 
 #import "MFLTransformingDigit.h"
-#import "MFLTransformingDigit+Animation.h"
 #import "CAAnimation+Blocks.h"
+#import "MFLTransformingDigit+Animation.h"
 
 @interface MFLTransformingDigit()
 
@@ -191,7 +191,6 @@ static CGPoint controlTwo[10][4] =
     
     self.strokeColor = digit.strokeColor;
     self.lineThickness = digit.lineThickness;
-    
     self.animationDuration = digit.animationDuration;
     self.calculationMode = digit.calculationMode;
     self.timingFunction = digit.timingFunction;
@@ -199,6 +198,7 @@ static CGPoint controlTwo[10][4] =
     self.rotate3DStyle = digit.rotate3DStyle;
     self.shouldRotateIn2D = digit.shouldRotateIn2D;
     self.scaleStyle = digit.scaleStyle;
+    self.shouldAnimationNewSuperview = digit.shouldAnimationNewSuperview;
     
     return self;
 }
@@ -256,6 +256,7 @@ CGAffineTransform CGAffineTransformFromRectToRect(CGRect fromRect, CGRect toRect
     _scaleStyle = kMFLNoScale;
     
     _shouldRotateIn2D = NO;
+    _shouldAnimationNewSuperview = YES;
 }
 
 - (void)initializeLayer:(NSInteger)initialDigit
@@ -344,15 +345,20 @@ CGAffineTransform CGAffineTransformFromRectToRect(CGRect fromRect, CGRect toRect
 
 - (void)animateToDigit:(NSInteger)digit
 {
+    [self animateToDigit:digit completion:nil];
+}
+
+- (void)animateToDigit:(NSInteger)digit completion:(void (^)(BOOL))completion
+{
     switch (self.foldingStyle) {
         case kMFLSegmentFold:
         {
-            [self animateSegmentsToDigit:digit];
+            [self animateSegmentsToDigit:digit completion:completion];
             break;
         }
         case kMFLSingleLineFold:
         {
-            [self animateToDigitFlat:digit];
+            [self animateToDigitFlat:digit completion:completion];
             break;
         }
         default:
@@ -360,7 +366,13 @@ CGAffineTransform CGAffineTransformFromRectToRect(CGRect fromRect, CGRect toRect
     }
 }
 
+
 - (void)decrement
+{
+    [self decrementWithCompletion:nil];
+}
+
+- (void)decrementWithCompletion:(void (^)(BOOL))completion
 {
     if (self.currentDigit == 0) {
         self.currentDigit = 9;
@@ -368,12 +380,17 @@ CGAffineTransform CGAffineTransformFromRectToRect(CGRect fromRect, CGRect toRect
         self.currentDigit--;
     }
     
-    [self animateToDigit:self.currentDigit % 10];
+    [self animateToDigit:self.currentDigit % 10 completion:completion];
 }
 
 - (void)increment
 {
-    [self animateToDigit:(self.currentDigit + 1) % 10];
+    [self incrementWithCompletion:nil];
+}
+
+- (void)incrementWithCompletion:(void (^)(BOOL))completion
+{
+    [self animateToDigit:(self.currentDigit + 1) % 10 completion:completion];
 }
 
 - (void)removeFromSuperview:(BOOL)animated

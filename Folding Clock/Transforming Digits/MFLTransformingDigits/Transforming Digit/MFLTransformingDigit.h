@@ -122,24 +122,6 @@ typedef enum {
 
 
 /**
- *  Will animate directly to a digit, skipping those in between the current digit and digit argument
- *
- *  @param digit Digit to transform to
- */
-- (void)animateToDigit:(NSInteger)digit;
-
-/**
- *  Will decrement by one number, @Note: 0 will decrement to 9.
- */
-- (void)decrement;
-
-/**
- *  Will increment by one number, @Note 9 will increment to 0.
- */
-- (void)increment;
-
-
-/**
  *  Will draw UIBezierpath and return it for your own use.
  *
  *  @param digit The digit to draw the path for.
@@ -188,3 +170,5 @@ typedef enum {
 @property MFLFoldingStyle foldingStyle;
 
 @end
+
+#import "MFLTransformingDigit+Animation.h"
