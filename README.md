@@ -1,4 +1,4 @@
-MFLFoldingClock
+MFLTransformingDigits and MFLTransformingScoreboard
 ----------
 
 ####Beginnings of a fun animation project in UIBezierPaths
