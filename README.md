@@ -90,3 +90,5 @@ A clock is still in the works, but the current plan is to implement a scoreboard
 
 ####Credit due.
 This animation is inspired by the "Timely" Android App, and this [writeup](http://sriramramani.wordpress.com/2013/10/14/number-tweening/) describing it's bezier math.
+
+Scoreboard is based a bit on [JDFlipNumberView's implementation of target animation](https://github.com/jaydee3/JDFlipNumberView)
