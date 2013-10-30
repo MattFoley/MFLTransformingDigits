@@ -215,6 +215,7 @@ static CGPoint controlTwo[10][4] =
 {
     self.layer.transform = CATransform3DIdentity;
     [super setFrame:frame];
+    [self transformToProperFrame];
 }
 
 
@@ -224,6 +225,7 @@ static CGPoint controlTwo[10][4] =
         CGPoint prevCenter = self.layer.position;
         CGAffineTransform transform = CGAffineTransformFromRectToRect(CGRectMake(0, 0, 200, 200),
                                                                       self.frame);
+        self.layer.transform = CATransform3DIdentity;
         [self.layer setFrame:CGRectMake(0, 0, 200, 200)];
         self.layer.transform = CATransform3DMakeAffineTransform(transform);
         
@@ -359,12 +361,14 @@ CGAffineTransform CGAffineTransformFromRectToRect(CGRect fromRect, CGRect toRect
         switch (self.foldingStyle) {
             case kMFLSingleLineFold:
             {
+                self.drawnDigit.strokeEnd = 0.0;
                 [self.drawnDigit addAnimation:animateStrokeEnd forKey:@"strokeEndAnimation"];
                 break;
             }
             case kMFLSegmentFold:
             {
                 [self.drawnSegments enumerateObjectsUsingBlock:^(CAShapeLayer *layer, NSUInteger idx, BOOL *stop) {
+                    layer.strokeEnd = 0.0;
                     [layer addAnimation:animateStrokeEnd forKey:@"strokeEndAnimation"];
                 }];
                 break;
