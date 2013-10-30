@@ -213,8 +213,8 @@ static CGPoint controlTwo[10][4] =
 
 - (void)setFrame:(CGRect)frame
 {
-    self.layer.transform = CATransform3DIdentity;
     [super setFrame:frame];
+    [self transformToProperFrame];
 }
 
 
@@ -224,6 +224,7 @@ static CGPoint controlTwo[10][4] =
         CGPoint prevCenter = self.layer.position;
         CGAffineTransform transform = CGAffineTransformFromRectToRect(CGRectMake(0, 0, 200, 200),
                                                                       self.frame);
+        self.layer.transform = CATransform3DIdentity;
         [self.layer setFrame:CGRectMake(0, 0, 200, 200)];
         self.layer.transform = CATransform3DMakeAffineTransform(transform);
         
