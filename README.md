@@ -82,6 +82,10 @@ The methods come in flavors with completion blocks and durations for finer grain
 
      - (void)stopAnimation;
      
+###License
+
+Feel free to do whatever you'd like with this codebase privately, I've put it here as an example of some fun CAShapeLayer/UIBezierPath drawing examples. However, if you'd like to use the app in a commercial application, I'd appreciate it if you would pick up a [commercial license from BinPress for 40$](http://www.binpress.com/app/transforming-scoreboard-for-ios/1747) or contact me to work something else out. 
+
 ###Future Plans
 
 Eventually this will hold multiple fonts, but is currently based on Futura. 
