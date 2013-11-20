@@ -1,4 +1,4 @@
-MFLFoldingClock
+MFLTransformingDigit
 ----------
 
 ####Beginnings of a fun animation project in UIBezierPaths
@@ -8,7 +8,7 @@ This is a highly complex animation library for showing numbers changing, be it a
 After creating it you can increment, decrement or set it directly to a digit.
 
 Much more is planned in the future, but for now check out a [video here.](http://www.youtube.com/watch?v=AWKp-sXtM90)
-**Note:** This video is now out dated, check out the sample projects for a better idea of capability.
+**Note:** This video is now out dated, check out the sample project for a better idea of capability.
 
 ###Initialize Types
 
@@ -56,6 +56,32 @@ The following properties are available to customize the style and animation of t
      - (void)incrementWithCompletion:(void (^)(BOOL))completion;
      
      
+MFLTransformingScoreBoard
+----------
+
+The Scoreboard is a new addition built by stringing together a dynamic amount of MFLTransformingDigits.
+
+You can use it in IB, or just plain initWithFrame, but if you want a bit more control over the style, you can use these:
+
+     - (id)initWithBaseDigit:(MFLTransformingDigit *)digit forFrame:(CGRect)frame;
+
+     - (id)initWithBaseDigit:(MFLTransformingDigit *)digit andValue:(NSInteger)value forFrame:(CGRect)frame;
+
+The idea is to create an MFLTransformingDigit with the style you want to use, and then initialize your scoreboard with it. Resetting this digit later will update the look of your Scoreboard.
+
+
+After that, you have three basic methods:
+
+     - (void)setToValue:(NSInteger)value;
+
+     - (void)decrementByValue:(NSInteger)value;
+
+     - (void)incrementByValue:(NSInteger)value;
+
+The methods come in flavors with completion blocks and durations for finer grained control. If at any time you want to stop the animation call:
+
+     - (void)stopAnimation;
+     
 ###Future Plans
 
 Eventually this will hold multiple fonts, but is currently based on Futura. 
@@ -64,3 +90,5 @@ A clock is still in the works, but the current plan is to implement a scoreboard
 
 ####Credit due.
 This animation is inspired by the "Timely" Android App, and this [writeup](http://sriramramani.wordpress.com/2013/10/14/number-tweening/) describing it's bezier math.
+
+Scoreboard is based a bit on [JDFlipNumberView's implementation of target animation](https://github.com/jaydee3/JDFlipNumberView)
