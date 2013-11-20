@@ -22,12 +22,14 @@
         switch (self.foldingStyle) {
             case kMFLSingleLineFold:
             {
+                self.drawnDigit.strokeEnd = 1.0;
                 [self.drawnDigit addAnimation:animateStrokeEnd forKey:@"strokeEndAnimation"];
                 break;
             }
             case kMFLSegmentFold:
             {
                 [self.drawnSegments enumerateObjectsUsingBlock:^(CAShapeLayer *layer, NSUInteger idx, BOOL *stop) {
+                    layer.strokeEnd = 1.0;
                     [layer addAnimation:animateStrokeEnd forKey:@"strokeEndAnimation"];
                 }];
                 break;

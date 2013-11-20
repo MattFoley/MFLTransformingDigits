@@ -192,6 +192,7 @@ typedef NS_ENUM(NSInteger, MFLScaleAnimationStyle) {
  */
 - (void)removeFromSuperview:(BOOL)animated;
 
+- (void)setFrameAnimated:(CGRect)frame duration:(CGFloat)duration;
 
 #pragma mark Ignore Me!
 

@@ -190,7 +190,7 @@ static CGPoint controlTwo[10][4] =
     } else {
         self = [self initWithFrame:digit.frame andDigit:digit.currentDigit];
     }
-
+    
     self.strokeColor = digit.strokeColor;
     self.lineThickness = digit.lineThickness;
     self.animationDuration = digit.animationDuration;
@@ -217,9 +217,19 @@ static CGPoint controlTwo[10][4] =
 {
     self.layer.transform = CATransform3DIdentity;
     [super setFrame:frame];
-    [self transformToProperFrame];
+    
+    if (self.superview) {
+        [self transformToProperFrame];
+    }
 }
 
+- (void)setFrameAnimated:(CGRect)frame duration:(CGFloat)duration
+{
+    CGRect prevFrame = self.frame;
+    self.layer.transform = CATransform3DIdentity;
+    [super setFrame:frame];
+    [self animateToProperFrame:duration prevFrame:prevFrame];
+}
 
 - (void)transformToProperFrame
 {
@@ -227,13 +237,37 @@ static CGPoint controlTwo[10][4] =
         CGPoint prevCenter = self.layer.position;
         CGAffineTransform transform = CGAffineTransformFromRectToRect(CGRectMake(0, 0, 200, 200),
                                                                       self.frame);
-        self.layer.transform = CATransform3DIdentity;
+        //self.layer.transform = CATransform3DIdentity;
         [self.layer setFrame:CGRectMake(0, 0, 200, 200)];
-        self.layer.transform = CATransform3DMakeAffineTransform(transform);
         
         [self setCenter:prevCenter];
+        
+        self.layer.anchorPoint = CGPointMake(.5,.5);
+        self.layer.contentsGravity = @"center";
+        
+        self.layer.transform = CATransform3DMakeAffineTransform(transform);
     }
     
+}
+
+- (void)animateToProperFrame:(CGFloat)duration prevFrame:(CGRect)prevFrame
+{
+    if (!CGSizeEqualToSize(self.frame.size, (CGSize){200,200})) {
+        CGPoint prevCenter = self.layer.position;
+        CGAffineTransform transform = CGAffineTransformFromRectToRect(CGRectMake(0, 0, 200, 200),
+                                                                      self.frame);
+        //self.layer.transform = CATransform3DIdentity;
+        //[self.layer setFrame:CGRectMake(0, 0, 200, 200)];
+        [self setFrame:prevFrame];
+        [self setCenter:prevCenter];
+        
+        self.layer.anchorPoint = CGPointMake(.5,.5);
+        self.layer.contentsGravity = @"center";
+        
+        [UIView animateWithDuration:duration animations:^{
+            self.layer.transform = CATransform3DMakeAffineTransform(transform);
+        }];
+    }
 }
 
 CGAffineTransform CGAffineTransformFromRectToRect(CGRect fromRect, CGRect toRect)
@@ -246,6 +280,8 @@ CGAffineTransform CGAffineTransformFromRectToRect(CGRect fromRect, CGRect toRect
 - (void)sharedInit
 {
     self.backgroundColor = [UIColor clearColor];
+    
+    self.layer.masksToBounds = YES;
     
     _calculationMode = kCAAnimationCubic;
     _timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];

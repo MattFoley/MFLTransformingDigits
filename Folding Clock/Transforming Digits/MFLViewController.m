@@ -33,6 +33,7 @@
 @property IBOutletCollection(MFLTransformingDigit) NSMutableArray *digitViews;
 
 @property BOOL shouldIncrement;
+@property BOOL shouldEnlarge;
 
 @end
 
@@ -42,7 +43,9 @@
 {
     [super viewDidLoad];
     
+    self.shouldEnlarge = YES;
     self.shouldIncrement = YES;
+    
     [self initExample];
     
     double delayInSeconds = 1.0;
@@ -81,7 +84,7 @@
     
     //digitTestRestroke
     [self.digitTestRestroke setAnimationStyle:kMFLAnimationRestroke];
-
+    
     [self.digitViews enumerateObjectsUsingBlock:^(MFLTransformingDigit *obj, NSUInteger idx, BOOL *stop) {
         [obj setLineThickness:3];
     }];
@@ -121,7 +124,7 @@
     [self.digitViews enumerateObjectsUsingBlock:^(MFLTransformingDigit *digit, NSUInteger idx, BOOL *stop) {
         CGRect oldFrame = digit.frame;
         [digit removeFromSuperview:YES];
-      
+        
         double delayInSeconds = 2.0;
         dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
         dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
@@ -139,10 +142,10 @@
 
 - (IBAction)scrambleDigits:(id)sender
 {
-
+    
     [self.digitViews enumerateObjectsUsingBlock:^(MFLTransformingDigit *digit, NSUInteger idx, BOOL *stop) {
         NSInteger newNumber = arc4random()%10;
-
+        
         [digit animateToDigit:newNumber completion:^(BOOL success) {
             NSLog(@"Scramble to %li completed", (long)digit.currentDigit);
         }];
@@ -167,6 +170,18 @@
     
 }
 
+- (IBAction)changeFrames:(id)sender
+{
+    [self.digitViews enumerateObjectsUsingBlock:^(MFLTransformingDigit *digit, NSUInteger idx, BOOL *stop) {
+        if (self.shouldEnlarge) {
+            [digit setFrameAnimated:CGRectInset(digit.frame, 50, 50) duration:.3];
+        } else {
+            [digit setFrameAnimated:CGRectInset(digit.frame, -50, -50) duration:.3];
+        }
+    }];
+    
+    self.shouldEnlarge = !self.shouldEnlarge;
+}
 
 - (void)didReceiveMemoryWarning
 {
