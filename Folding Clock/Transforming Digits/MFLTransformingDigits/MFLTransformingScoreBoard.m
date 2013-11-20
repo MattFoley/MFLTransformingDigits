@@ -239,9 +239,9 @@ static CGFloat kMFLMaxTimerRefreshRate = 0.1; // = 60 fps
     
     if (self.animationDirection == kMFLAnimateDown) {
         NSInteger prevStringLen = [[@(self.nextValue + stepValue) stringValue] length];
-        BOOL didLoseSignificantDigit = (prevStringLen > stringValue.length);
+        NSInteger significantDigitsLost = (prevStringLen - stringValue.length);
         
-        if (didLoseSignificantDigit) {
+        while (significantDigitsLost > 0) {
             //Animate from current digit to zero before disappearing
             /*
             if (stringValue.length > 1) {
@@ -257,6 +257,7 @@ static CGFloat kMFLMaxTimerRefreshRate = 0.1; // = 60 fps
             //Animate from current digit to gone.
             
             [self removeMostSignificantDigit];
+            significantDigitsLost--;
         }
     }
     
@@ -287,7 +288,21 @@ static CGFloat kMFLMaxTimerRefreshRate = 0.1; // = 60 fps
 }
 
 
-
+- (void)setBaseDigit:(MFLTransformingDigit *)digit
+{
+    [self.digitArray enumerateObjectsUsingBlock:^(MFLTransformingDigit *boardDigit, NSUInteger idx, BOOL *stop) {
+        boardDigit.strokeColor = digit.strokeColor;
+        boardDigit.lineThickness = digit.lineThickness;
+        boardDigit.animationDuration = digit.animationDuration;
+        boardDigit.calculationMode = digit.calculationMode;
+        boardDigit.timingFunction = digit.timingFunction;
+        boardDigit.animationStyle = digit.animationStyle;
+        boardDigit.rotate3DStyle = digit.rotate3DStyle;
+        boardDigit.shouldRotateIn2D = digit.shouldRotateIn2D;
+        boardDigit.scaleStyle = digit.scaleStyle;
+        boardDigit.shouldAnimationNewSuperview = digit.shouldAnimationNewSuperview;
+    }];
+}
 
 
 

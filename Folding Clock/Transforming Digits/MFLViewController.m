@@ -48,7 +48,7 @@
     double delayInSeconds = 1.0;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        //[self rotateDigits];
+        [self rotateDigits];
     });
 }
 
@@ -81,10 +81,15 @@
     
     //digitTestRestroke
     [self.digitTestRestroke setAnimationStyle:kMFLAnimationRestroke];
-    
+
     [self.digitViews enumerateObjectsUsingBlock:^(MFLTransformingDigit *obj, NSUInteger idx, BOOL *stop) {
         [obj setLineThickness:3];
     }];
+    
+    MFLTransformingDigit *baseDigit = self.scoreBoard.baseDigit;
+    [baseDigit setLineThickness:12];
+    
+    self.scoreBoard.baseDigit = baseDigit;
 }
 
 - (void)rotateDigits

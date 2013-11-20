@@ -175,6 +175,8 @@ static CGPoint controlTwo[10][4] =
         [self sharedInit];
         [self initializeLayer:initialDigit];
         
+        self.drawnDigit.shadowColor = [UIColor blueColor].CGColor;
+        self.drawnDigit.shadowOffset = CGSizeMake(0, 3);
         _foldingStyle = kMFLSingleLineFold;
     }
     
