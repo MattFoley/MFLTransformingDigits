@@ -144,7 +144,7 @@ static CGPoint controlTwo[10][4] =
     
     if (self) {
         // Initialization code
-        [self sharedInit];
+        [self sharedInitWithInitialDigit:0];
         [self initializeLayer:0];
         
         _foldingStyle = kMFLSingleLineFold;
@@ -158,7 +158,7 @@ static CGPoint controlTwo[10][4] =
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        [self sharedInit];
+        [self sharedInitWithInitialDigit:initialDigit];
         [self initializeSegments:initialDigit];
         
         _foldingStyle = kMFLSegmentFold;
@@ -172,7 +172,7 @@ static CGPoint controlTwo[10][4] =
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        [self sharedInit];
+        [self sharedInitWithInitialDigit:initialDigit];
         [self initializeLayer:initialDigit];
         
         self.drawnDigit.shadowColor = [UIColor blueColor].CGColor;
@@ -277,7 +277,7 @@ CGAffineTransform CGAffineTransformFromRectToRect(CGRect fromRect, CGRect toRect
     return scale;
 }
 
-- (void)sharedInit
+- (void)sharedInitWithInitialDigit:(NSInteger)initialDigit
 {
     self.backgroundColor = [UIColor clearColor];
     
@@ -297,6 +297,7 @@ CGAffineTransform CGAffineTransformFromRectToRect(CGRect fromRect, CGRect toRect
     
     _shouldRotateIn2D = NO;
     _shouldAnimationNewSuperview = YES;
+    self.currentDigit = initialDigit;
 }
 
 - (void)initializeLayer:(NSInteger)initialDigit
