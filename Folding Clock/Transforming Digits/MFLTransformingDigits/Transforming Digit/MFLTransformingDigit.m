@@ -297,7 +297,7 @@ CGAffineTransform CGAffineTransformFromRectToRect(CGRect fromRect, CGRect toRect
     
     _shouldRotateIn2D = NO;
     _shouldAnimationNewSuperview = YES;
-    self.currentDigit = initialDigit;
+    _currentDigit = initialDigit;
 }
 
 - (void)initializeLayer:(NSInteger)initialDigit
